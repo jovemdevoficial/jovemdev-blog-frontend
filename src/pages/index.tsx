@@ -1,3 +1,10 @@
+import { SEO } from '../infra/components/SEO';
+
 export default function Home() {
-  return <div>Hello world</div>;
+  return (
+    <>
+      <SEO title="Blog - teste" />
+      <div>Hello world</div>
+    </>
+  );
 }

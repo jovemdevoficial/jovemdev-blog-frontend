@@ -9,14 +9,20 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-size: 62.5%;
+    font-size: 60%;
   }
 
-  body {
-    color: red;
+  body, input, button, textarea {
+    font-size: 1.6rem;
   }
 
   a {
     text-decoration: none;
   }
+
+  @media (min-width: 700px) {
+    html {
+      font-size: 62.5%;
+    }
+}
 `;
