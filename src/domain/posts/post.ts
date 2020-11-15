@@ -88,12 +88,12 @@ export type PostData = {
   id: PostID;
   title: string;
   content: string;
-  category: PostCategory;
+  category?: PostCategory;
   slug: string;
   description: string;
   seo: string;
-  authors: PostAuthor[];
-  tags: PostTag[];
+  authors?: PostAuthor[];
+  tags?: PostTag[];
   created_by: PostCreatedBy;
   updated_by: PostCreatedBy;
   created_at: string;
