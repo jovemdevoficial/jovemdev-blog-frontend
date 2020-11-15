@@ -1,15 +1,15 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 // import { useRouter } from 'next/router';
 import { getAllPosts } from '../../data/posts/get-all-posts';
-import { getAllTags } from '../../data/tags/get-all-tags';
+import { getAllAuthors } from '../../data/authors/get-all-authors';
 import { PostData } from '../../domain/posts/post';
 
-export type DynamicTagProps = {
+export type DynamicAuthorProps = {
   posts: PostData[];
-  tag: string;
+  author: string;
 };
 
-export default function DynamicTag({ posts, tag }: DynamicTagProps) {
+export default function DynamicAuthor({ posts, author }: DynamicAuthorProps) {
   /*
   const router = useRouter();
 
@@ -20,7 +20,7 @@ export default function DynamicTag({ posts, tag }: DynamicTagProps) {
 
   return (
     <>
-      <h1>Tag: {tag}</h1>
+      <h1>Autor: {author}</h1>
       {posts.map((post) => (
         <h2 key={post.slug}>{post.title}</h2>
       ))}
@@ -29,26 +29,26 @@ export default function DynamicTag({ posts, tag }: DynamicTagProps) {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const tagName = ctx.params.name;
-  const urlQuery = `_sort=id:desc&tags.name_contains=${tagName}`;
+  const authorName = ctx.params.name;
+  const urlQuery = `_sort=id:desc&authors.name_contains=${authorName}`;
   const posts = await getAllPosts(urlQuery);
 
   return {
     props: {
       posts,
-      tag: tagName,
+      author: authorName,
     },
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const tags = await getAllTags();
+  const authors = await getAllAuthors();
 
   return {
-    paths: tags.map((tag) => {
+    paths: authors.map((author) => {
       return {
         params: {
-          name: tag.name,
+          name: author.name,
         },
       };
     }),

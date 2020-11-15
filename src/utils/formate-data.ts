@@ -1,4 +1,4 @@
-export const formatDate = (date: string): string => {
+export const formateDate = (date: string): string => {
   const mounths = [
     'Janeiro',
     'Fevereiro',
