@@ -37,8 +37,18 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="pt-BR">
-        <Head />
+        <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@200;400;500&family=Roboto:wght@100;300;400;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
+          <noscript>
+            Este site não funciona muito bem sem Javascript, habilite porfavor
+            :)
+          </noscript>
           <Main />
           <NextScript />
         </body>

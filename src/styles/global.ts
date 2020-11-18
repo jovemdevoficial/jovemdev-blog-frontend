@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: ---apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 
   body, input, button, textarea {
@@ -22,6 +22,13 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+  }
+
+  noscript {
+    font-size: ${({ theme }) => theme.font.sizes.large};
+    z-index: 100;
+    margin-bottom: ${({ theme }) => theme.spacings.large};
+    font-weight: bold;
   }
 
   @media (min-width: 700px) {

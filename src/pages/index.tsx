@@ -2,12 +2,7 @@ import { GetStaticProps } from 'next';
 import { PostData } from '../domain/posts/post';
 import { getAllPosts } from '../data/posts/get-all-posts';
 import { SEO } from '../infra/components/SEO';
-
 import { SITE_NAME } from '../config/api-config';
-
-/*
-Quando buscar os dados do post verficar se a categoria, autores e tags existem
-*/
 
 export type HomeProps = {
   posts: PostData[];

@@ -17,16 +17,16 @@ export const LabelHamburger = styled.label`
 export const Hamburger = styled.span`
   position: relative;
   display: block;
-  background: black;
+  background: #fff;
   width: 30px;
-  height: 2px;
+  height: 3px;
   top: 29px;
   left: 15px;
   transition: 0.5s ease-in-out;
 
   &::before,
   &::after {
-    background: black;
+    background: #fff;
     content: '';
     display: block;
     width: 100%;
