@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Roboto', sans-serif;
+    color: ${({ theme }) => theme.colors.white};
   }
 
   body, input, button, textarea {

@@ -1,81 +1,59 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Input = styled.input`
-  height: 100%;
-  width: 100%;
+export const SearchText = styled.input`
   border: none;
-  outline: none;
-  background: #fff;
-  border-radius: 50px;
-  font-size: 18px;
-  padding: 0 60px 0 20px;
-  opacity: 0;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  padding: 0;
+  background: none;
+  color: ${({ theme }) => theme.colors.darkGray};
+  font-size: ${({ theme }) => theme.font.sizes.medium};
+  transition: 0.4s;
+  line-height: 30px;
+  width: 0;
 
-  &.active {
-    opacity: 1;
-  }
+  transition: all 1s;
 `;
 
 export const SearchButton = styled.div`
-  position: absolute;
-  top: 50%;
-  right: 4px;
-  z-index: 1;
-  transform: translateY(-50%);
-  line-height: 60px;
-  font-size: 25px;
-  cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  ${({ theme }) => css`
+    color: ${theme.colors.primary};
+    font-size: ${theme.font.sizes.large};
+    background: ${theme.colors.white};
+    width: 38px;
+    height: 38px;
+    border-radius: 40px;
 
-  background-color: #fff;
-  color: #15e226;
-  height: 45px;
-  width: 45px;
-  border-radius: 50px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &.active {
-    height: 35px;
-    width: 35px;
-    color: #fff;
-    background-color: #15e226;
-    line-height: 50px;
-    font-size: 20px;
-    transform: translateY(-50%) rotate(360deg);
-  }
-`;
-
-export const CancelButton = styled.div`
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  color: #fff;
-  transform: translateY(-50%);
-  font-size: 25px;
-  cursor: pointer;
-  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-  display: none;
-
-  &.active {
-    right: -40px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+
+    transition: all 1s linear;
+
+    cursor: pointer;
+  `};
 `;
 
 export const SearchBox = styled.div`
-  position: relative;
-  height: 40px;
-  width: 30px;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  height: 38px;
+  border-radius: 40px;
+  margin-right: 20px;
+  background: ${({ theme }) => theme.colors.white};
 
-  &.active {
-    width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    padding: 10px 5px 10px 10px;
+    height: 40px;
+  }
+
+  &:hover > ${SearchText} {
+    width: 240px;
+    padding: 0 6px;
+  }
+
+  &:hover > ${SearchButton} {
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;

@@ -12,7 +12,7 @@ export default function Home({ posts }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const urlQuery = '_sort=id:desc&_start=0&_limit=6';
+  const urlQuery = '_sort=id:desc&_start=0&_limit=7';
   const posts = await getAllPosts(urlQuery);
 
   return {

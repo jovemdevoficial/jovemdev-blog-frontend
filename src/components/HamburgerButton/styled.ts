@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 60px;
-  height: 60px;
+  height: ${({ theme }) => theme.spacings.extraLarge};
+  width: ${({ theme }) => theme.spacings.extraLarge};
 `;
 
 export const LabelHamburger = styled.label`

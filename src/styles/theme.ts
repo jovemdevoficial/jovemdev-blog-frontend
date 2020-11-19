@@ -13,6 +13,7 @@ export const theme = {
     medium: '2rem',
     large: '3rem',
     superLarge: '5rem',
+    extraLarge: '6rem',
   },
   font: {
     sizes: {
