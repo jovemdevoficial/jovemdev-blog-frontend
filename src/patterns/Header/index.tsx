@@ -10,7 +10,7 @@ export function Header() {
       <HeaderContainer>
         <HamburgerButton />
         <Link href="/">
-          <a>Jovem Dev</a>
+          <a>{'< Jovem DEV />'}</a>
         </Link>
         <Search />
       </HeaderContainer>

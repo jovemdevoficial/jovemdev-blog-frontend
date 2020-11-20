@@ -5,12 +5,6 @@ export const Container = styled.div`
   height: 100vh;
 `;
 
-export const Main = styled.main`
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 960px;
-`;
-
 export const Featured = styled.section`
   display: flex;
   align-items: center;

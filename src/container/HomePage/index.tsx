@@ -5,7 +5,6 @@ import { PostData } from '../../domain/posts/post';
 
 import {
   Container,
-  Main,
   Featured,
   FeaturedCover,
   FeaturedDatails,
@@ -18,6 +17,8 @@ import { Typography } from '../../infra/components/Typography';
 import { Header } from '../../patterns/Header';
 
 import { SITE_NAME } from '../../config/api-config';
+
+import { MainContainer } from '../../components/MainContainer';
 
 export type HomePageProps = {
   posts: PostData[];
@@ -37,7 +38,7 @@ export function HomePage() {
       />
       <Container>
         <Header />
-        <Main>
+        <MainContainer>
           <Featured>
             <FeaturedCover>
               <img
@@ -89,7 +90,7 @@ export function HomePage() {
               </IconsContainer>
             </FeaturedDatails>
           </Featured>
-        </Main>
+        </MainContainer>
       </Container>
     </>
   );
