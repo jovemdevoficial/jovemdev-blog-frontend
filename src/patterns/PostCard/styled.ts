@@ -12,11 +12,19 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: center;
 
+  justify-self: center;
+  align-self: center;
+
   img {
     width: 280px;
     height: 190px;
-
     border-radius: 20px 20px 0 0;
+  }
+
+  transition: transform 0.5s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5%);
   }
 `;
 
@@ -25,7 +33,15 @@ export const PostCardDetails = styled.section`
   margin-top: 10px;
 
   p {
-    margin: 5px 0 15px 0;
+    padding: 5px 0 10px 0;
+  }
+
+  a {
+    color: ${({ theme }) => theme.colors.secondary};
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 `;
 
@@ -48,14 +64,10 @@ export const PublishDetails = styled.div`
     color: ${({ theme }) => theme.colors.primary};
     font: 500 10px Roboto, sans-serif;
   }
-
-  a:hover {
-    text-decoration: underline;
-  }
 `;
 
 export const IconsDetails = styled.div`
-  min-width: 70px;
+  width: 70px;
 
   display: flex;
   align-items: center;
@@ -68,7 +80,7 @@ export const IconsDetails = styled.div`
   span {
     font-weight: 300;
     font-size: 14px;
-    margin-right: 5px;
+    margin-right: 4px;
   }
 
   a {

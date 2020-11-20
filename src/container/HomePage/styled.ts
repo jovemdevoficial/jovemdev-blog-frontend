@@ -1,14 +1,11 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-`;
-
 export const Featured = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  margin-bottom: ${({ theme }) => theme.spacings.superLarge};
 `;
 
 export const FeaturedCover = styled.div`

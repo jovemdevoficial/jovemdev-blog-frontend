@@ -37,7 +37,7 @@ export function PostCard() {
 
         <Typography component="subtitle2">
           Como utilizar o github Actions para mandar seu profile atualizado e
-          bonito e lorem ipsun etc etc etc...
+          bonito e lorem ipsun etc etc etc fdfdfd...
         </Typography>
 
         <ContainerPostDetails>
