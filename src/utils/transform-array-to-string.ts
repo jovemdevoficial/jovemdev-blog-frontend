@@ -3,5 +3,5 @@ export type TransformArrayToStringProps = {
 };
 
 export function transformArrayToString(props: TransformArrayToStringProps[]) {
-  return props.map((obj) => obj.name).join(', ');
+  return props.map((obj) => obj.name || '').join(', ');
 }

@@ -27,7 +27,7 @@ export type HomePageProps = {
   posts: PostData[];
 };
 
-export function HomePage() {
+export function HomePage({ posts }: HomePageProps) {
   return (
     <>
       <SEO
@@ -41,18 +41,15 @@ export function HomePage() {
       />
       <Header />
       <MainContainer>
-        <Featured>
+        <Featured backgroundUrlResponsive={posts[1].cover.formats.large.url}>
           <FeaturedCover>
-            <img
-              src="https://res.cloudinary.com/almerindopaixao/image/upload/v1605244650/small_Post_Azul_com_Titulo_Grande_de_Novembro_Azul_para_Redes_Sociais_84058d78b3.png"
-              alt="Qualquer Coisa"
-            />
+            <img src={posts[1].cover.formats.small.url} alt="Qualquer Coisa" />
           </FeaturedCover>
 
           <FeaturedDatails>
             <AuthorDetails>
               <img
-                src="https://res.cloudinary.com/almerindopaixao/image/upload/v1605244645/thumbnail_Post_Azul_com_Titulo_Grande_de_Novembro_Azul_para_Redes_Sociais_84058d78b3.png"
+                src={posts[0].authors[0].avatar.formats.thumbnail.url}
                 alt="Author Avatar"
               />
               <div>
@@ -93,6 +90,7 @@ export function HomePage() {
           </FeaturedDatails>
         </Featured>
         <GridLayout>
+          <PostCard />
           <PostCard />
           <PostCard />
           <PostCard />

@@ -12,11 +12,22 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: center;
 
-  justify-self: center;
   align-self: center;
 
+  &:nth-child(3n + 2) {
+    justify-self: center;
+  }
+
+  &:nth-child(3n) {
+    justify-self: right;
+  }
+
+  & > a {
+    width: 100%;
+  }
+
   img {
-    width: 280px;
+    width: 100%;
     height: 190px;
     border-radius: 20px 20px 0 0;
   }
@@ -26,14 +37,25 @@ export const Card = styled.div`
   &:hover {
     transform: translateY(-5%);
   }
+
+  @media (max-width: 912px) {
+    justify-self: center;
+
+    &:nth-child(3n) {
+      justify-self: center;
+    }
+
+    width: 90%;
+    height: 90%;
+  }
 `;
 
 export const PostCardDetails = styled.section`
-  width: 260px;
   margin-top: 10px;
+  padding: 0 10px 0 10px;
 
   p {
-    padding: 5px 0 10px 0;
+    padding: 5px 0 15px 0;
   }
 
   a {
@@ -42,6 +64,12 @@ export const PostCardDetails = styled.section`
 
   a:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 960px) {
+    p {
+      padding: 10px 0 20px 0;
+    }
   }
 `;
 

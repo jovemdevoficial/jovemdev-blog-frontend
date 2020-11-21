@@ -56,4 +56,10 @@ export const SearchBox = styled.div`
     background: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.white};
   }
+
+  @media (max-width: 960px) {
+    &:hover > ${SearchText} {
+      width: 210px;
+    }
+  }
 `;

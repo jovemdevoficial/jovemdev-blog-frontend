@@ -16,7 +16,7 @@ export const HeaderContainer = styled.header`
       font-size: ${theme.font.sizes.large};
       transition: color 0.5s ease-in-out;
       position: absolute;
-      left: 45%;
+      left: 44%;
     }
 
     a:hover {
@@ -24,7 +24,11 @@ export const HeaderContainer = styled.header`
     }
   `}
 
-  @media(max-width: 580px) {
+  @media (max-width: 960px) {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (max-width: 580px) {
     a {
       display: none;
     }

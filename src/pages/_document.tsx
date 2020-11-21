@@ -43,6 +43,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@200;400;500&family=Roboto:wght@100;300;400;700&display=swap"
             rel="stylesheet"
           />
+          <meta name="theme-color" content="#15e226" />
           <meta name="rating" content="general" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="revisit-after" content="1 day" />

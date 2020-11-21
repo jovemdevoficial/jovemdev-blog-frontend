@@ -13,7 +13,7 @@ export type SeoProps = {
   title: string;
   description: string;
   keywords: string;
-  url: string;
+  url?: string;
   type: 'blog' | 'website' | 'article';
   site_name: string;
   authors: PropertyAuthors[];
@@ -35,6 +35,7 @@ export function SEO({
   return (
     <Head>
       <title>{title}</title>
+      <meta name="application-name" content="Jovem DEV Blog" />
       <meta name="description" content={description} />
       <meta name="author" content={transformArrayToString(authors)} />
       <meta name="creator" content="Jovem DEV" />
@@ -71,6 +72,7 @@ export function SEO({
       <meta name="twitter:description" content={description} />
       {/* menor que 1mb, o tamanho deve ser thumbinail
         <meta name="twitter:image"content="" />
+        <meta name="twitter:creator" content="" />
       */}
       <meta name="twitter:url" content={url} />
     </Head>

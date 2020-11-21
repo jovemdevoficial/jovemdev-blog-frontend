@@ -7,8 +7,8 @@ export type HomeProps = {
   posts: PostData[];
 };
 
-export default function Home() {
-  return <HomePage />;
+export default function Home({ posts }: HomeProps) {
+  return <HomePage posts={posts} />;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
