@@ -5,21 +5,16 @@ import { countAllPosts } from '../../../data/posts/count-all-post';
 import { postsPerPage } from '../../../config/constants';
 import { getAllPosts } from '../../../data/posts/get-all-posts';
 
+import { PaginationPage } from '../../../container/PaginationPage';
+import { createArrayWithNumberOfPosts } from '../../../utils/create-array-with-number-of-posts';
+
 export type PagePostsProps = {
   posts: PostData[];
   pagination: PaginationTypes;
 };
 
-export default function PagePosts({ posts, pagination }: PagePostsProps) {
-  return (
-    <>
-      <h1>{`${pagination.page} de ${pagination.numberOfPages}`}</h1>
-      <br />
-      {posts.map((post) => {
-        return <h1 key={post.slug}>{post.title}</h1>;
-      })}
-    </>
-  );
+export default function PagePosts({ pagination }: PagePostsProps) {
+  return <PaginationPage pagination={pagination} />;
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
@@ -52,15 +47,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const numberOfPosts = Number(await countAllPosts());
-
-  const numberOfPages = Math.ceil(numberOfPosts / postsPerPage);
-  const arrayPages = [];
-  let i: number;
-
-  for (i = 1; i <= numberOfPages; i++) {
-    arrayPages.push(String(i));
-  }
+  const arrayPages = await createArrayWithNumberOfPosts();
 
   return {
     paths: arrayPages.map((number) => {

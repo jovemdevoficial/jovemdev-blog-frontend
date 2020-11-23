@@ -4,7 +4,9 @@ export const Container = styled.footer`
   margin: 0 auto;
   max-width: 96rem;
   color: black;
-  padding: 10px;
+  padding: ${({ theme }) => theme.spacings.medium};
+
+  text-align: center;
 
   display: flex;
   flex-direction: column;
