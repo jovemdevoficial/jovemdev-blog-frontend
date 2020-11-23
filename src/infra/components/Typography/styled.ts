@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Title = styled.h1`
+  font: 700 ${({ theme }) => theme.font.sizes.extraLarge} Merriweather,
+    sans-serif;
+  line-height: 65px;
+`;
+
 export const H1 = styled.h1`
   font: 700 ${({ theme }) => theme.font.sizes.superLarge} Merriweather,
     sans-serif;
@@ -27,4 +33,10 @@ export const Subtitle1 = styled.p`
 export const Subtitle2 = styled.p`
   font: 300 ${({ theme }) => theme.font.sizes.small} Roboto, sans-serif;
   line-height: 16px;
+`;
+
+export const Subtitle3 = styled.p`
+  font: 400 ${({ theme }) => theme.font.sizes.superLarge} Poppins, sans-serif;
+  line-height: 45px;
+  color: ${({ theme }) => theme.colors.secondary};
 `;

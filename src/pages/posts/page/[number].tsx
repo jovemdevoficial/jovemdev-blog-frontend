@@ -8,13 +8,30 @@ import { getAllPosts } from '../../../data/posts/get-all-posts';
 import { PaginationPage } from '../../../container/PaginationPage';
 import { createArrayWithNumberOfPosts } from '../../../utils/create-array-with-number-of-posts';
 
+import { SEO } from '../../../infra/components/SEO';
+
+import { SITE_NAME, SITE_URL } from '../../../config/api-config';
+
 export type PagePostsProps = {
   posts: PostData[];
   pagination: PaginationTypes;
 };
 
 export default function PagePosts({ pagination }: PagePostsProps) {
-  return <PaginationPage pagination={pagination} />;
+  return (
+    <>
+      <SEO
+        title={`Todos os posts: Página ${pagination.page} | Jovem Dev`}
+        authors={[{ name: 'Almerindo Paixão' }, { name: 'Angélica Pereira' }]}
+        description="Todos os posts do blog jovem dev"
+        keywords="Posts, Blog"
+        site_name={SITE_NAME}
+        url={`${SITE_URL}/posts/page/${pagination.page}`}
+        type="blog"
+      />
+      <PaginationPage pagination={pagination} />
+    </>
+  );
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {

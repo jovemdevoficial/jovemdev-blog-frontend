@@ -19,6 +19,7 @@ export type SeoProps = {
   authors: PropertyAuthors[];
   category?: string;
   tags?: PropertyTags[];
+  published_time?: string;
 };
 
 export function SEO({
@@ -28,9 +29,10 @@ export function SEO({
   url,
   type,
   site_name,
-  category = '',
   authors,
-  tags,
+  tags = [{ name: '' }],
+  category = '',
+  published_time = '',
 }: SeoProps) {
   return (
     <Head>
@@ -52,7 +54,7 @@ export function SEO({
           />
           <meta property="article:section" content={category} />
           <meta property="article:tag" content={transformArrayToString(tags)} />
-          <meta property="article:published_time" content="date_time" />
+          <meta property="article:published_time" content={published_time} />
         </>
       )}
 

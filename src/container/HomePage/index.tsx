@@ -18,7 +18,8 @@ import { Header } from '../../patterns/Header';
 import { Footer } from '../../patterns/Footer';
 import { PostCard } from '../../patterns/PostCard';
 
-import { SITE_NAME } from '../../config/api-config';
+import { SITE_NAME, SITE_URL } from '../../config/api-config';
+import { formateDate } from '../../utils/formate-data';
 
 import { MainContainer } from '../../components/MainContainer';
 import { GridLayout } from '../../components/GridLayout';
@@ -34,32 +35,35 @@ export function HomePage({ posts }: HomePageProps) {
         title={`Home | ${SITE_NAME}`}
         description="Essa é uma descrição teste"
         keywords="Blog,Tecnologia,Programação"
-        url="http://localhost:3000"
+        url={SITE_URL}
         type="blog"
         site_name="Jovem Dev"
         authors={[{ name: 'Almerindo Paixão' }, { name: 'Angélica Pereira' }]}
       />
       <Header />
       <MainContainer>
-        <Featured backgroundUrlResponsive={posts[1].cover.formats.large.url}>
+        <Featured backgroundUrlResponsive={posts[0].cover.formats.large.url}>
           <FeaturedCover>
-            <img src={posts[1].cover.formats.small.url} alt="Qualquer Coisa" />
+            <img src={posts[0].cover.formats.small.url} alt={posts[0].title} />
           </FeaturedCover>
 
           <FeaturedDatails>
             <AuthorDetails>
               <img
                 src={posts[0].authors[0].avatar.formats.thumbnail.url}
-                alt="Author Avatar"
+                alt={posts[0].authors[0].name}
               />
               <div>
                 <span>
                   Publicado por{' '}
-                  <Link href="/">
-                    <a>Angélica Pereira</a>
+                  <Link
+                    href="/autor/[name]"
+                    as={`/autor/${posts[0].authors[0].name}`}
+                  >
+                    <a>{posts[0].authors[0].name}</a>
                   </Link>
                 </span>
-                <span>20 de novembro de 2020</span>
+                <span>{formateDate(posts[0].published_at)}</span>
               </div>
             </AuthorDetails>
 
@@ -75,11 +79,13 @@ export function HomePage({ posts }: HomePageProps) {
             <IconsContainer>
               <div>
                 <span>10</span>
-                <Link href="#">
-                  <a>
-                    <FaHeart />
-                  </a>
-                </Link>
+                <a
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${SITE_URL}/posts/${posts[0].slug}`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <FaHeart />
+                </a>
               </div>
               <Link href="#">
                 <a>

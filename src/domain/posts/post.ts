@@ -12,6 +12,7 @@ export type PostAuthor = {
   published_at: string;
   social_networks: AuthorSocialNetworks;
   avatar: PostCover;
+  amountOfPosts: string;
 };
 
 export type AuthorSocialNetworks = {
