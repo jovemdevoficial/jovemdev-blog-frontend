@@ -58,7 +58,7 @@ export function HomePage({ posts }: HomePageProps) {
                   Publicado por{' '}
                   <Link
                     href="/autor/[name]"
-                    as={`/autor/${posts[0].authors[0].name}`}
+                    as={`/autor/${posts[0].authors[0].slug}`}
                   >
                     <a>{posts[0].authors[0].name}</a>
                   </Link>

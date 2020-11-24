@@ -1,27 +1,14 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const AuthorDetails = styled.div`
-  margin: ${({ theme }) => theme.spacings.medium} 0;
+export const WritterBy = styled.h4`
+  ${({ theme }) => css`
+    color: ${theme.colors.lightGray};
+    font: 300 ${theme.font.sizes.superLarge} Roboto, sans-serif;
 
-  & + & {
-    margin-top: ${({ theme }) => theme.spacings.large};
-  }
-`;
+    margin: ${theme.spacings.large} 0;
 
-export const AuthorDescription = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50px;
-  }
-`;
-
-export const PostDetails = styled.section`
-  @media (max-width: 960px) {
-    padding: ${({ theme }) => theme.spacings.medium};
-  }
+    @media (max-width: 960px) {
+      margin: ${theme.spacings.large} ${theme.spacings.medium};
+    }
+  `}
 `;

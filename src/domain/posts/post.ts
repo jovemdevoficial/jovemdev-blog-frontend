@@ -13,6 +13,7 @@ export type PostAuthor = {
   social_networks: AuthorSocialNetworks;
   avatar: PostCover;
   amountOfPosts: string;
+  slug: string;
 };
 
 export type AuthorSocialNetworks = {
@@ -21,11 +22,13 @@ export type AuthorSocialNetworks = {
   twitter: string;
   facebook: string;
   linkedin: string;
+  instagram: string;
 };
 
 export type PostCategory = {
   id: PostID;
   name: string;
+  slug: string;
   created_by: number;
   updated_by: number;
   created_at: string;
@@ -36,6 +39,7 @@ export type PostCategory = {
 export type PostTag = {
   id: PostID;
   name: string;
+  slug: string;
   created_by: number;
   updated_by: number;
   created_at: string;

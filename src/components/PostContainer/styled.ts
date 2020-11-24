@@ -17,15 +17,17 @@ export const Container = styled.article`
   }
 
   h2 {
-    font: 600 ${({ theme }) => theme.font.sizes.superLarge} Poppins, sans-serif;
+    font: 600 4rem Poppins, sans-serif;
+    margin-top: ${({ theme }) => theme.spacings.extraLarge};
   }
 
   h3 {
-    font: 600 2.5rem Poppins, sans-serif;
+    font: 600 3rem Poppins, sans-serif;
+    margin-top: ${({ theme }) => theme.spacings.superLarge};
   }
 
   h4 {
-    font: 600 2rem Poppins, sans-serif;
+    font: 600 2.2rem Poppins, sans-serif;
   }
 
   li {
@@ -49,6 +51,7 @@ export const Container = styled.article`
   ul,
   ol {
     margin: ${({ theme }) => theme.spacings.medium};
+    margin-left: ${({ theme }) => theme.spacings.superLarge};
   }
 
   pre {

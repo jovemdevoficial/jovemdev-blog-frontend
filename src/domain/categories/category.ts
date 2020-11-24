@@ -3,6 +3,7 @@ import { PostID, PostData } from '../posts/post';
 export type Category = {
   id: PostID;
   name: string;
+  slug: string;
   created_by: number;
   updated_by: number;
   created_at: string;

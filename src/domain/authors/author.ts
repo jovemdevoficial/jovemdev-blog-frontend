@@ -13,6 +13,7 @@ export type Author = {
   social_networks: AuthorSocialNetworks;
   avatar: PostCover;
   amountOfPosts: string;
+  slug: string;
   posts: PostData[] & { category: number };
 };
 
@@ -22,4 +23,5 @@ export type AuthorSocialNetworks = {
   twitter: string;
   facebook: string;
   linkedin: string;
+  instagram: string;
 };

@@ -12,21 +12,25 @@ import { PaginationDescription } from '../../components/PaginationDescription';
 
 export type PaginationPageProps = {
   posts?: PostData;
-  category?: string;
-  tag?: string;
+  categoryName?: string;
+  categorySlug?: string;
+  tagName?: string;
+  tagSlug?: string;
   pagination: PaginationTypes;
 };
 
 export function PaginationPage({
   pagination,
-  category = '',
-  tag = '',
+  categoryName = '',
+  categorySlug = '',
+  tagName = '',
+  tagSlug = '',
 }: PaginationPageProps) {
   return (
     <>
       <Header />
       <MainContainer>
-        <PaginationDescription category={category} tag={tag} />
+        <PaginationDescription category={categoryName} tag={tagName} />
         <GridLayout>
           <PostCard />
           <PostCard />
@@ -35,7 +39,7 @@ export function PaginationPage({
           <PostCard />
           <PostCard />
         </GridLayout>
-        <Pagination {...pagination} category={category} tag={tag} />
+        <Pagination {...pagination} category={categorySlug} tag={tagSlug} />
       </MainContainer>
       <Footer />
     </>

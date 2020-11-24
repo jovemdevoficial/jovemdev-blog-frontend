@@ -1,5 +1,4 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
-// import { useRouter } from 'next/router';
 import { getAllPosts } from '../../data/posts/get-all-posts';
 import { getAllAuthors } from '../../data/authors/get-all-authors';
 import { PostData } from '../../domain/posts/post';
@@ -10,14 +9,6 @@ export type DynamicAuthorProps = {
 };
 
 export default function DynamicAuthor({ posts, author }: DynamicAuthorProps) {
-  /*
-  const router = useRouter();
-
-  if (router.isFallback) {
-    return <div>...Loading</div>;
-  }
-  */
-
   return (
     <>
       <h1>Autor: {author}</h1>
@@ -29,14 +20,15 @@ export default function DynamicAuthor({ posts, author }: DynamicAuthorProps) {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const authorName = ctx.params.name;
-  const urlQuery = `_sort=id:desc&authors.name_contains=${authorName}`;
+  const authorSlug = ctx.params.slug;
+  const urlQuery = `_sort=id:desc&authors.slug_contains=${authorSlug}`;
   const posts = await getAllPosts(urlQuery);
 
   return {
     props: {
       posts,
-      author: authorName,
+      author: posts[0].authors.filter((value) => value.slug == authorSlug)[0]
+        .name,
     },
   };
 };
@@ -48,7 +40,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: authors.map((author) => {
       return {
         params: {
-          name: author.name,
+          slug: author.slug,
         },
       };
     }),
