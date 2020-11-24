@@ -41,7 +41,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   if (data.length > 0) {
     for (author of data[0].authors) {
       amountOfPosts =
-        String(await countAllPosts(`authors.name_contains=${author.name}`)) ||
+        String(await countAllPosts(`authors.slug_contains=${author.slug}`)) ||
         '';
 
       authors.push({ ...author, amountOfPosts });

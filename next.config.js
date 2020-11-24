@@ -8,7 +8,7 @@ module.exports = {
     return [{ source: '/(.*)', headers: createSecureHeaders() }];
   },
 
-  webpack(config) {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
