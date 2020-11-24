@@ -7,6 +7,8 @@ import Document, {
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
+import { SITE_NAME } from '../config/api-config';
+
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
@@ -46,6 +48,12 @@ export default class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,300&family=Roboto:wght@100;300;400;700&display=swap"
             rel="stylesheet"
+          />
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            title={`${SITE_NAME} Blog - RSS Feed`}
+            href="/rss.xml"
           />
         </Head>
         <body>

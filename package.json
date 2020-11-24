@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy:static": "next build && next export",
+    "deploy:static": "yarn sitemap:build && yarn rss:build && next build && next export",
     "start": "next start",
-    "sitemap": "node src/scripts/generate-sitemap.js",
+    "sitemap:build": "node src/scripts/generate-sitemap.js",
+    "rss:build": "node src/scripts/generate-fedd-rss.js",
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll"
   },
