@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:3000/404</loc>
+    <loc>http://localhost:3000/404/</loc>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:3000</loc>
+    <loc>http://localhost:3000/</loc>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/teste2</loc>
+    <loc>http://localhost:3000/posts/teste2/</loc>
     <lastmod>2020-11-13T05:36:53.693Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/teste-3</loc>
+    <loc>http://localhost:3000/posts/teste-3/</loc>
     <lastmod>2020-11-15T01:12:36.900Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/teste-6</loc>
+    <loc>http://localhost:3000/posts/teste-6/</loc>
     <lastmod>2020-11-15T01:20:35.202Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/teste-5</loc>
+    <loc>http://localhost:3000/posts/teste-5/</loc>
     <lastmod>2020-11-15T01:16:34.977Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -40,7 +40,7 @@
 
   <url>
     <loc
-      >http://localhost:3000/posts/entre-criar-um-blog-pessoal-com-gatsby-e-usar-o-medium-por-que-nao-ter-os-dois</loc
+      >http://localhost:3000/posts/entre-criar-um-blog-pessoal-com-gatsby-e-usar-o-medium-por-que-nao-ter-os-dois/</loc
     >
     <lastmod>2020-11-23T02:48:14.039Z</lastmod>
     <changefreq>daily</changefreq>
@@ -48,137 +48,137 @@
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/teste-7</loc>
+    <loc>http://localhost:3000/posts/teste-7/</loc>
     <lastmod>2020-11-15T01:21:41.632Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/title</loc>
+    <loc>http://localhost:3000/posts/title/</loc>
     <lastmod>2020-11-14T01:06:30.805Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/teste-4</loc>
+    <loc>http://localhost:3000/posts/teste-4/</loc>
     <lastmod>2020-11-15T01:13:57.448Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/page/1</loc>
+    <loc>http://localhost:3000/posts/page/1/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/page/2</loc>
+    <loc>http://localhost:3000/posts/page/2/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/page/3</loc>
+    <loc>http://localhost:3000/posts/page/3/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/categoria/javascript/page/1</loc>
+    <loc>http://localhost:3000/categoria/javascript/page/1/</loc>
     <lastmod>2020-11-23T19:22:50.525Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/categoria/javascript/page/2</loc>
+    <loc>http://localhost:3000/categoria/javascript/page/2/</loc>
     <lastmod>2020-11-23T19:22:50.525Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/categoria/python/page/1</loc>
+    <loc>http://localhost:3000/categoria/python/page/1/</loc>
     <lastmod>2020-11-23T19:23:20.709Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/categoria/golang/page/1</loc>
+    <loc>http://localhost:3000/categoria/golang/page/1/</loc>
     <lastmod>2020-11-23T19:24:12.433Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/tag/banco-de-dados/page/1</loc>
+    <loc>http://localhost:3000/tag/banco-de-dados/page/1/</loc>
     <lastmod>2020-11-23T19:24:22.448Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/tag/banco-de-dados/page/2</loc>
+    <loc>http://localhost:3000/tag/banco-de-dados/page/2/</loc>
     <lastmod>2020-11-23T19:24:22.448Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/tag/banco-de-dados/page/3</loc>
+    <loc>http://localhost:3000/tag/banco-de-dados/page/3/</loc>
     <lastmod>2020-11-23T19:24:22.448Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/tag/frameworks/page/1</loc>
+    <loc>http://localhost:3000/tag/frameworks/page/1/</loc>
     <lastmod>2020-11-23T19:24:33.299Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/tag/frameworks/page/2</loc>
+    <loc>http://localhost:3000/tag/frameworks/page/2/</loc>
     <lastmod>2020-11-23T19:24:33.299Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/tag/frameworks/page/3</loc>
+    <loc>http://localhost:3000/tag/frameworks/page/3/</loc>
     <lastmod>2020-11-23T19:24:33.299Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/tag/outra-tag/page/1</loc>
+    <loc>http://localhost:3000/tag/outra-tag/page/1/</loc>
     <lastmod>2020-11-23T19:24:43.598Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/tag/outra-tag/page/2</loc>
+    <loc>http://localhost:3000/tag/outra-tag/page/2/</loc>
     <lastmod>2020-11-23T19:24:43.598Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/autor/almerindo-paixao</loc>
+    <loc>http://localhost:3000/autor/almerindo-paixao/</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2020-11-23T20:28:23.330Z</lastmod>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/autor/angelica-pereira</loc>
+    <loc>http://localhost:3000/autor/angelica-pereira/</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2020-11-13T05:20:08.336Z</lastmod>
     <priority>0.7</priority>

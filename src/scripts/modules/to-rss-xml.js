@@ -31,9 +31,9 @@ const toRssXML = (posts) => {
     <title>
       &lt;![CDATA[ ${SITE_NAME} Blog - RSS Feed ]]&gt;
     </title>
-    <description>
-      &lt;![CDATA[ I'm a software developer &amp; web designer in Colorado Springs, Colorado. I like to explore and write about code, video games, technology, and more. ]]&gt;
-    </description>
+    <description
+      >&lt;![CDATA[ I'm a software developer &amp; web designer in Colorado Springs, Colorado. I like to explore and write about code, video games, technology, and more. ]]&gt;</description
+    >
     <link>${SITE_URL}</link>
     <language>pt-br</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>

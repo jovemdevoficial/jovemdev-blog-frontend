@@ -13,7 +13,7 @@ export type SeoProps = {
   title: string;
   description: string;
   keywords: string;
-  url?: string;
+  url: string;
   type: 'blog' | 'website' | 'article';
   site_name: string;
   authors: PropertyAuthors[];

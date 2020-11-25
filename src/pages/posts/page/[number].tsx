@@ -21,7 +21,7 @@ export default function PagePosts({ pagination }: PagePostsProps) {
   return (
     <>
       <SEO
-        title={`Todos os posts: Página ${pagination.page} | Jovem Dev`}
+        title={`Todos os posts: Página ${pagination.page} | ${SITE_NAME} Blog`}
         authors={[{ name: 'Almerindo Paixão' }, { name: 'Angélica Pereira' }]}
         description="Todos os posts do blog jovem dev"
         keywords="Posts, Blog"

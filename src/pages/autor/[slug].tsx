@@ -1,34 +1,29 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { getAllPosts } from '../../data/posts/get-all-posts';
 import { getAllAuthors } from '../../data/authors/get-all-authors';
-import { PostData } from '../../domain/posts/post';
+import { Author } from '../../domain/authors/author';
+
+import { AuthorPage } from '../../container/AuthorPage';
 
 export type DynamicAuthorProps = {
-  posts: PostData[];
-  author: string;
+  author: Author;
 };
 
-export default function DynamicAuthor({ posts, author }: DynamicAuthorProps) {
-  return (
-    <>
-      <h1>Autor: {author}</h1>
-      {posts.map((post) => (
-        <h2 key={post.slug}>{post.title}</h2>
-      ))}
-    </>
-  );
+export default function DynamicAuthor({ author }: DynamicAuthorProps) {
+  return <AuthorPage author={author} />;
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const authorSlug = ctx.params.slug;
-  const urlQuery = `_sort=id:desc&authors.slug_contains=${authorSlug}`;
-  const posts = await getAllPosts(urlQuery);
+  const urlQuery = `slug=${authorSlug}`;
+  const data = await getAllAuthors(urlQuery);
+
+  data[0].posts.sort((a, b) => (b.id < a.id ? -1 : 1));
+
+  const author = data.length > 0 ? data[0] : {};
 
   return {
     props: {
-      posts,
-      author: posts[0].authors.filter((value) => value.slug == authorSlug)[0]
-        .name,
+      author,
     },
   };
 };

@@ -1,7 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { getAllPosts } from '../../../../data/posts/get-all-posts';
 import { getAllCategories } from '../../../../data/categories/get-all-categories';
-import { PostCategory, PostData } from '../../../../domain/posts/post';
+import { Category } from '../../../../domain/categories/category';
 import { PaginationTypes } from '../../../../domain/posts/pagination';
 
 import { createArrayWithNumberOfPosts } from '../../../../utils/create-array-with-number-of-posts';
@@ -13,32 +12,29 @@ import { SEO } from '../../../../infra/components/SEO';
 import { SITE_NAME } from '../../../../config/api-config';
 
 export type DynamicCategoryProps = {
-  posts?: PostData[];
   pagination: PaginationTypes;
-  category: string;
-  slug: string;
+  category: Category;
 };
 
 export default function DynamicCategory({
   category,
   pagination,
-  slug,
 }: DynamicCategoryProps) {
   return (
     <>
       <SEO
-        title={`${category} | Jovem DEV Blog`}
+        title={`${category.name} | ${SITE_NAME} Blog`}
         description="Página para tags"
         site_name={SITE_NAME}
         authors={[{ name: 'Almerindo Paixão' }, { name: 'Angélica' }]}
         keywords="Tags, Blog"
         type="blog"
-        url={`http://localhost:3000/categoria/${slug}/page/${pagination.page}`}
+        url={`http://localhost:3000/categoria/${category.slug}/page/${pagination.page}`}
       />
       <PaginationPage
         pagination={pagination}
-        categoryName={category}
-        categorySlug={slug}
+        categoryName={category.name}
+        categorySlug={category.slug}
       />
     </>
   );
@@ -49,24 +45,28 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const page = Number(ctx.params.number);
 
   const startFrom = (page - 1) * postsPerPage;
+  const stopTo = page * postsPerPage;
 
-  const urlQueryAllPosts = `_sort=id:desc&_start=${startFrom}&_limit=${postsPerPage}&category.slug_contains=${categorySlug}`;
+  const urlQueryAllCategory = `slug=${categorySlug}`;
 
-  const posts = await getAllPosts(urlQueryAllPosts);
-
-  const urlQueryCountAllPosts = `category.slug_contains=${categorySlug}`;
+  const data = await getAllCategories(urlQueryAllCategory);
 
   const pagination = await createPaginationObject({
     pageUrl: page,
-    urlCountAllPosts: urlQueryCountAllPosts,
+    numberOfPosts: data[0].posts.length,
   });
+
+  data[0].posts.sort((a, b) => (b.id < a.id ? -1 : 1));
+
+  const category = {
+    ...data[0],
+    posts: data[0].posts.slice(startFrom, stopTo),
+  };
 
   return {
     props: {
-      posts,
+      category: data.length > 0 ? category : {},
       pagination,
-      category: posts[0].category.name,
-      slug: categorySlug,
     },
   };
 };
@@ -76,12 +76,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const paths = [];
 
-  let category: PostCategory;
+  let category: Category;
   let number: string;
 
   for (category of categories) {
-    const urlQuery = `category.slug_contains=${category.slug}`;
-    const numberOfPages = await createArrayWithNumberOfPosts(urlQuery);
+    const numberOfPosts = category.posts.length;
+    const numberOfPages = createArrayWithNumberOfPosts(numberOfPosts);
 
     for (number of numberOfPages) {
       paths.push({

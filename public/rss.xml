@@ -9,12 +9,12 @@
     <title>
       &lt;![CDATA[ Jovem DEV Blog - RSS Feed ]]&gt;
     </title>
-    <description>
-      &lt;![CDATA[ I'm a software developer &amp; web designer in Colorado Springs, Colorado. I like to explore and write about code, video games, technology, and more. ]]&gt;
-    </description>
+    <description
+      >&lt;![CDATA[ I'm a software developer &amp; web designer in Colorado Springs, Colorado. I like to explore and write about code, video games, technology, and more. ]]&gt;</description
+    >
     <link>http://localhost:3000</link>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 24 Nov 2020 20:34:17 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2020 12:03:43 GMT</lastBuildDate>
     <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
