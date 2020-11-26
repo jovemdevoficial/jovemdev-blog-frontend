@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  img {
-    border-radius: 100%;
-    display: block;
-    margin: ${({ theme }) => theme.spacings.large} auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:first-child {
+    margin: ${({ theme }) => theme.spacings.large} 0;
+
+    img {
+      border-radius: 100%;
+    }
   }
 
   strong {
@@ -12,7 +18,7 @@ export const Container = styled.section`
   }
 
   @media (max-width: 960px) {
-    margin: ${({ theme }) => theme.spacings.medium};
+    padding: ${({ theme }) => theme.spacings.medium};
 
     strong {
       font-size: 14px;

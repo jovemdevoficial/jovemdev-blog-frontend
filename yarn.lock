@@ -2404,6 +2404,11 @@
   resolved "https://registry.yarnpkg.com/@types/parse5/-/parse5-5.0.3.tgz#e7b5aebbac150f8b5fdd4a46e7f0bd8e65e19109"
   integrity sha512-kUNnecmtkunAoQ3CnjmMkzNU/gtxG8guhi+Fk2U/kOpIKjIMKnXGp4IJCgQJrXSgMsWYimYG4TGjz/UzbGEBTw==
 
+"@types/prettier@^2.1.5":
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.1.5.tgz#b6ab3bba29e16b821d84e09ecfaded462b816b00"
+  integrity sha512-UEyp8LwZ4Dg30kVU2Q3amHHyTn1jEdhCIE59ANed76GaT1Vp76DD3ZWSAxgCrw6wJ0TqeoBpqmfUHiUDPs//HQ==
+
 "@types/prop-types@*":
   version "15.7.3"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
@@ -8076,6 +8081,14 @@ neo-async@^2.5.0, neo-async@^2.6.1, neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+
+next-images@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/next-images/-/next-images-1.6.2.tgz#e5535ba468c3c857025e7fa07a27c773326223ad"
+  integrity sha512-tmINk0NzJ/D7Kk16x9gOgTd9wlcVG4IfyEcQqt/SY31miwuv5pzUhT7fakO2fYPrXimHOEPBaacCz1G6jADcbQ==
+  dependencies:
+    file-loader "^6.0.0"
+    url-loader "^4.0.0"
 
 next-secure-headers@^2.0.0:
   version "2.0.0"

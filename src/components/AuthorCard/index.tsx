@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { Container, AuthorContact, AuthorDescription } from './styled';
 import { PostAuthor } from '../../domain/posts/post';
@@ -11,7 +12,13 @@ export type AuthorCardProps = {
 export function AuthorCard({ author }: AuthorCardProps) {
   return (
     <Container>
-      <img src={author.avatar.formats.thumbnail.url} alt={author.name} />
+      <Image
+        src={author.avatar.formats.thumbnail.url}
+        alt={author.name}
+        width={150}
+        height={150}
+        layout="fixed"
+      />
       <div>
         <AuthorDescription>
           <Link href="/autor/[slug]" as={`/autor/${author.slug}`}>

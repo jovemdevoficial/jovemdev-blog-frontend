@@ -6,8 +6,10 @@ export const Container = styled.main`
   align-items: center;
   justify-content: center;
 
-  width: 100%;
+  margin: 0 auto;
   padding: ${({ theme }) => theme.spacings.medium};
+  max-width: 96rem;
+  margin-top: ${({ theme }) => theme.spacings.large};
 
   p {
     padding: ${({ theme }) => theme.spacings.large} 0;
@@ -30,9 +32,5 @@ export const Container = styled.main`
 
   strong {
     margin-left: 3px;
-  }
-
-  .page-not-found {
-    width: 100%;
   }
 `;

@@ -6,12 +6,10 @@ export const Container = styled.div`
   justify-content: space-between;
 
   img {
-    width: 150px;
-    height: 150px;
     border-radius: 100px;
   }
 
-  & > div {
+  div + div {
     width: 72rem;
   }
 
@@ -22,11 +20,11 @@ export const Container = styled.div`
 
     flex-direction: column;
 
-    & > div {
+    div + div {
       width: 100%;
     }
 
-    img {
+    &:first-child {
       margin: ${({ theme }) => theme.spacings.medium} auto;
       margin-bottom: ${({ theme }) => theme.spacings.superLarge};
     }

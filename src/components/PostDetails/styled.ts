@@ -23,11 +23,6 @@ export const Container = styled.section`
   `}
 `;
 
-export const PostCover = styled.img`
-  margin: ${({ theme }) => theme.spacings.large} 0;
-  max-width: 100%;
-`;
-
 export const AuthorDetails = styled.div`
   display: flex;
   align-items: center;
@@ -48,18 +43,15 @@ export const AuthorDescription = styled.div`
   justify-content: space-between;
 
   img {
-    width: 64px;
-    height: 64px;
     border-radius: 50px;
-
-    margin-right: 10px;
   }
 
-  div {
+  div + div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    margin-left: 10px;
     min-width: 150px;
 
     a {

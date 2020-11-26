@@ -33,6 +33,7 @@ export function PostPage({ post }: HomePageProps) {
         category={post.category.name}
         tags={post.tags}
         published_time={post.published_at}
+        updated_time={post.updated_at}
       />
       <Header />
       <MainContainer>

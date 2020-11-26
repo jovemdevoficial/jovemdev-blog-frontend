@@ -40,8 +40,6 @@ export const FeaturedCover = styled.div`
   max-width: 400px;
 
   img {
-    height: 100%;
-    width: 100%;
     border-radius: 40px;
   }
 
@@ -84,29 +82,27 @@ export const AuthorDetails = styled.div`
   margin-bottom: 40px;
 
   img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-
-    margin: 0 8px 0 0;
+    border-radius: 100%;
   }
 
-  div {
+  div + div {
     display: flex;
     flex-direction: column;
   }
 
   span {
-    color: ${({ theme }) => theme.colors.lightGray};
+    color: ${({ theme }) => theme.colors.secondary};
     font: 500 ${({ theme }) => theme.font.sizes.small} Roboto, sans-serif;
+    margin-left: 8px;
   }
 
   a {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.secondary};
     font: 700 ${({ theme }) => theme.font.sizes.small} Roboto, sans-serif;
   }
 
   a:hover {
+    color: ${({ theme }) => theme.colors.primary};
     text-decoration: underline;
   }
 

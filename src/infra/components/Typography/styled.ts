@@ -13,7 +13,7 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  font: 700 16px Merriweather, sans-serif;
+  font: 700 18px Merriweather, sans-serif;
   line-height: 20px;
 `;
 
@@ -31,8 +31,8 @@ export const Subtitle1 = styled.p`
 `;
 
 export const Subtitle2 = styled.p`
-  font: 300 ${({ theme }) => theme.font.sizes.small} Roboto, sans-serif;
-  line-height: 16px;
+  font: 300 14px Roboto, sans-serif;
+  line-height: 20px;
 `;
 
 export const Subtitle3 = styled.p`

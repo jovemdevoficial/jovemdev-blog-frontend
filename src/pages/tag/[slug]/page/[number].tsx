@@ -9,7 +9,7 @@ import { createPaginationObject } from '../../../../utils/create-pagination-obje
 
 import { PaginationPage } from '../../../../container/PaginationPage';
 import { SEO } from '../../../../infra/components/SEO';
-import { SITE_NAME } from '../../../../config/api-config';
+import { SITE_NAME, SITE_AUTHORS } from '../../../../config/api-config';
 
 export type DynamicTagProps = {
   tag: Tag;
@@ -23,7 +23,7 @@ export default function DynamicTag({ tag, pagination }: DynamicTagProps) {
         title={`${tag.name} | ${SITE_NAME} Blog`}
         description="Página para tags"
         site_name={SITE_NAME}
-        authors={[{ name: 'Almerindo Paixão' }, { name: 'Angélica' }]}
+        authors={SITE_AUTHORS}
         keywords="Tags, Blog"
         type="blog"
         url={`http://localhost:3000/tag/${tag.slug}/page/${pagination.page}`}

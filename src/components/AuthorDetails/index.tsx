@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { Author } from '../../domain/authors/author';
 import { SocialNetworks } from '../SocialNetworks';
 import { Container, AuthorDescription, AuthorContact } from './styled';
@@ -11,7 +13,15 @@ export type AuthorDetailsProps = {
 export function AuthorDetails({ author }: AuthorDetailsProps) {
   return (
     <Container>
-      <img src={author.avatar.formats.thumbnail.url} alt={author.name} />
+      <Image
+        src={author.avatar.formats.thumbnail.url}
+        alt={author.name}
+        width={150}
+        height={150}
+        layout="fixed"
+        loading="eager"
+        priority={true}
+      />
       <div>
         <AuthorDescription>
           <Typography component="h1">{author.name}</Typography>

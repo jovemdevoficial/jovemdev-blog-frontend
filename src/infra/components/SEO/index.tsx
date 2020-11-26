@@ -13,20 +13,21 @@ export type SeoProps = {
   title: string;
   description: string;
   keywords: string;
-  url: string;
+  url?: string;
   type: 'blog' | 'website' | 'article';
   site_name: string;
   authors: PropertyAuthors[];
   category?: string;
   tags?: PropertyTags[];
   published_time?: string;
+  updated_time?: string;
 };
 
 export function SEO({
   title,
   description,
   keywords,
-  url,
+  url = '',
   type,
   site_name,
   authors,
@@ -45,6 +46,16 @@ export function SEO({
 
       <meta property="og:locale" content="pt_BR" />
       <meta property="og:type" content={type} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      {/* Maior que 200px x 200px
+      <meta property="og:image" content="" />
+      <meta property="og:image:width" content="500" />
+      <meta property="og:image:height" content="500" />
+      */}
+      <meta property="og:url" content={url} />
+      <meta property="og:site_name" content={site_name} />
+      <meta property="fb:app_id" content="1841679489341843" />
 
       {type === 'article' && (
         <>
@@ -57,17 +68,6 @@ export function SEO({
           <meta property="article:published_time" content={published_time} />
         </>
       )}
-
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      {/* Maior que 200px x 200px
-      <meta property="og:image" content="" />
-      <meta property="og:image:width" content="500" />
-      <meta property="og:image:height" content="500" />
-      */}
-      <meta property="og:url" content={url} />
-      <meta property="og:site_name" content={site_name} />
-      <meta property="fb:app_id" content="1841679489341843" />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />

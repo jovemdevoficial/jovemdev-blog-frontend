@@ -10,7 +10,7 @@ import { createArrayWithNumberOfPosts } from '../../../utils/create-array-with-n
 
 import { SEO } from '../../../infra/components/SEO';
 
-import { SITE_NAME, SITE_URL } from '../../../config/api-config';
+import { SITE_NAME, SITE_URL, SITE_AUTHORS } from '../../../config/api-config';
 
 export type PagePostsProps = {
   posts: PostData[];
@@ -22,7 +22,7 @@ export default function PagePosts({ pagination }: PagePostsProps) {
     <>
       <SEO
         title={`Todos os posts: Página ${pagination.page} | ${SITE_NAME} Blog`}
-        authors={[{ name: 'Almerindo Paixão' }, { name: 'Angélica Pereira' }]}
+        authors={SITE_AUTHORS}
         description="Todos os posts do blog jovem dev"
         keywords="Posts, Blog"
         site_name={SITE_NAME}
@@ -64,7 +64,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const arrayPages = await createArrayWithNumberOfPosts();
+  const numberOfPosts = Number(await countAllPosts());
+  const arrayPages = await createArrayWithNumberOfPosts(numberOfPosts);
 
   return {
     paths: arrayPages.map((number) => {

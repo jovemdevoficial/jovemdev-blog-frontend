@@ -25,19 +25,44 @@ export function SocialNetworks({
 }: SocialNetworksProps) {
   return (
     <Container>
-      <a href={githubUrl} rel="noopener noreferrer" target="_blank">
+      <a
+        aria-label="Ícone do GitHub"
+        href={githubUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <FaGithubSquare />
       </a>
-      <a href={instagramUrl} rel="noopener noreferrer" target="_blank">
+      <a
+        aria-label="Ícone do Instagram"
+        href={instagramUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <FaInstagramSquare />
       </a>
-      <a href={facebookUrl} rel="noopener noreferrer" target="_blank">
+      <a
+        aria-label="Ícone do Facebook"
+        href={facebookUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <FaFacebookSquare />
       </a>
-      <a href={linkedinUrl} rel="noopener noreferrer" target="_blank">
+      <a
+        aria-label="Ícone do Linkedin"
+        href={linkedinUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <FaLinkedin />
       </a>
-      <a href={twitterUrl} rel="noopener noreferrer" target="_blank">
+      <a
+        aria-label="Ícone do Twitter"
+        href={twitterUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <FaTwitterSquare />
       </a>
     </Container>

@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+
 import { FaShare, FaHeart } from 'react-icons/fa';
 
 import { PostData } from '../../domain/posts/post';
@@ -18,7 +20,7 @@ import { Header } from '../../patterns/Header';
 import { Footer } from '../../patterns/Footer';
 import { PostCard } from '../../patterns/PostCard';
 
-import { SITE_NAME, SITE_URL } from '../../config/api-config';
+import { SITE_NAME, SITE_URL, SITE_AUTHORS } from '../../config/api-config';
 import { formateDate } from '../../utils/formate-data';
 
 import { MainContainer } from '../../components/MainContainer';
@@ -38,20 +40,31 @@ export function HomePage({ posts }: HomePageProps) {
         url={SITE_URL}
         type="blog"
         site_name="Jovem Dev"
-        authors={[{ name: 'Almerindo Paixão' }, { name: 'Angélica Pereira' }]}
+        authors={SITE_AUTHORS}
       />
       <Header />
       <MainContainer>
         <Featured backgroundUrlResponsive={posts[0].cover.formats.large.url}>
           <FeaturedCover>
-            <img src={posts[0].cover.formats.small.url} alt={posts[0].title} />
+            <Image
+              src={posts[0].cover.formats.small.url}
+              alt={posts[0].title}
+              width={400}
+              height={400}
+              loading="eager"
+              priority={true}
+            />
           </FeaturedCover>
 
           <FeaturedDatails>
             <AuthorDetails>
-              <img
+              <Image
                 src={posts[0].authors[0].avatar.formats.thumbnail.url}
                 alt={posts[0].authors[0].name}
+                width={50}
+                height={50}
+                loading="eager"
+                priority={true}
               />
               <div>
                 <span>
@@ -80,6 +93,7 @@ export function HomePage({ posts }: HomePageProps) {
               <div>
                 <span>10</span>
                 <a
+                  aria-label="Ícone de curtidas"
                   href={`https://www.facebook.com/sharer/sharer.php?u=${SITE_URL}/posts/${posts[0].slug}`}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -87,8 +101,8 @@ export function HomePage({ posts }: HomePageProps) {
                   <FaHeart />
                 </a>
               </div>
-              <Link href="#">
-                <a>
+              <Link href="/">
+                <a aria-label="Ícon de compartilhamento">
                   <FaShare />
                 </a>
               </Link>

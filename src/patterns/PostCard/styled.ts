@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 export const Card = styled.div`
-  height: 360px;
   width: 280px;
   border-radius: 20px;
 
@@ -27,8 +26,6 @@ export const Card = styled.div`
   }
 
   img {
-    width: 100%;
-    height: 190px;
     border-radius: 20px 20px 0 0;
   }
 
@@ -38,7 +35,7 @@ export const Card = styled.div`
     transform: translateY(-5%);
   }
 
-  @media (max-width: 912px) {
+  @media (max-width: 960px) {
     justify-self: center;
 
     &:nth-child(3n) {
@@ -46,16 +43,15 @@ export const Card = styled.div`
     }
 
     width: 90%;
-    height: 90%;
   }
 `;
 
 export const PostCardDetails = styled.section`
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 0 10px 0 10px;
 
   p {
-    padding: 5px 0 15px 0;
+    padding: 15px 0 15px 0;
   }
 
   a {
@@ -74,6 +70,8 @@ export const PostCardDetails = styled.section`
 `;
 
 export const ContainerPostDetails = styled.div`
+  margin-bottom: ${({ theme }) => theme.spacings.large};
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,13 +82,22 @@ export const PublishDetails = styled.div`
   flex-direction: column;
 
   span {
-    color: ${({ theme }) => theme.colors.lightGray};
-    font: 300 10px Roboto, sans-serif;
+    display: block;
+    color: ${({ theme }) => theme.colors.secondary};
+    font: 300 ${({ theme }) => theme.font.sizes.small} Roboto, sans-serif;
+  }
+
+  span + span {
+    margin-top: 2px;
   }
 
   a {
+    color: ${({ theme }) => theme.colors.secondary};
+    font: 600 ${({ theme }) => theme.font.sizes.small} Roboto, sans-serif;
+  }
+
+  a:hover {
     color: ${({ theme }) => theme.colors.primary};
-    font: 500 10px Roboto, sans-serif;
   }
 `;
 

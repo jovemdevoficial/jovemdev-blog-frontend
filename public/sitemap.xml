@@ -11,6 +11,11 @@
   </url>
 
   <url>
+    <loc>http://localhost:3000/sobre/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
     <loc>http://localhost:3000/posts/teste2/</loc>
     <lastmod>2020-11-13T05:36:53.693Z</lastmod>
     <changefreq>daily</changefreq>

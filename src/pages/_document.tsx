@@ -55,6 +55,7 @@ export default class MyDocument extends Document {
             title={`${SITE_NAME} Blog - RSS Feed`}
             href="/rss.xml"
           />
+          <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         </Head>
         <body>
           <noscript>

@@ -4,7 +4,8 @@ import { SearchButton, SearchText, SearchBox } from './styled';
 export function Search() {
   return (
     <SearchBox>
-      <SearchText type="text" placeholder="Pesquisar" />
+      <SearchText id="input-search" type="text" placeholder="Pesquisar" />
+      <label aria-label="Pesquisar" htmlFor="input-search"></label>
 
       <SearchButton>
         <FaSearch />

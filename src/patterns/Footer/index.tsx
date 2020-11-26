@@ -1,5 +1,11 @@
 import { Container, Line, IconsContainer } from './styled';
 
+import githubIcon from '../../assets/icons/github_icon.svg';
+import instagramIcon from '../../assets/icons/instagram_icon.svg';
+import facebookIcon from '../../assets/icons/facebook_icon.svg';
+import linkedinIcon from '../../assets/icons/linkedin_icon.svg';
+import twitterIcon from '../../assets/icons/twitter_icon.svg';
+
 export function Footer() {
   return (
     <Container>
@@ -10,22 +16,19 @@ export function Footer() {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <img src="/assets/icons/github_icon.svg" alt="Ícone do Github" />
+          <img src={githubIcon} alt="Ícone do Github" />
         </a>
         <a href="#" rel="noopener noreferrer" target="_blank">
-          <img
-            src="/assets/icons/instagram_icon.svg"
-            alt="Ícone do Instagram"
-          />
+          <img src={instagramIcon} alt="Ícone do Instagram" />
         </a>
         <a href="#" rel="noopener noreferrer" target="_blank">
-          <img src="/assets/icons/facebook_icon.svg" alt="Ícone do Facebook" />
+          <img src={facebookIcon} alt="Ícone do Facebook" />
         </a>
         <a href="#" rel="noopener noreferrer" target="_blank">
-          <img src="/assets/icons/linkedin_icon.svg" alt="Ícone do Linkedin" />
+          <img src={linkedinIcon} alt="Ícone do Linkedin" />
         </a>
         <a href="#" rel="noopener noreferrer" target="_blank">
-          <img src="/assets/icons/twitter_icon.svg" alt="Ícone do Twitter" />
+          <img src={twitterIcon} alt="Ícone do Twitter" />
         </a>
       </IconsContainer>
       <Line />
