@@ -34,7 +34,7 @@ export function HomePage({ posts }: HomePageProps) {
   return (
     <>
       <SEO
-        title={`Home | ${SITE_NAME}`}
+        title={`Home | ${SITE_NAME} Blog`}
         description="Essa é uma descrição teste"
         keywords="Blog,Tecnologia,Programação"
         url={SITE_URL}
@@ -80,13 +80,10 @@ export function HomePage({ posts }: HomePageProps) {
               </div>
             </AuthorDetails>
 
-            <Typography component="h1">
-              Mostrando últimos posts e vídeos no Github Profile
-            </Typography>
+            <Typography component="h1">{posts[0].title}</Typography>
 
             <Typography component="subtitle1">
-              Como utilizar o github Actions para mandar seu profile atualizado
-              e bonito e lorem ipsun etc etc etc...
+              {posts[0].description}
             </Typography>
 
             <IconsContainer>
@@ -110,16 +107,9 @@ export function HomePage({ posts }: HomePageProps) {
           </FeaturedDatails>
         </Featured>
         <GridLayout>
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
+          {posts.slice(1).map((post) => {
+            return <PostCard key={post.slug} post={post} />;
+          })}
         </GridLayout>
       </MainContainer>
       <Footer />

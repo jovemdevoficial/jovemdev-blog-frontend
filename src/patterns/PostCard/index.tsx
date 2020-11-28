@@ -14,48 +14,61 @@ import {
 
 import { Typography } from '../../infra/components/Typography';
 
+import { SITE_URL } from '../../config/api-config';
+
+import { formateDate } from '../../utils/formate-data';
+
 export type PostCardProps = {
   post: PostData;
 };
 
-export function PostCard() {
+export function PostCard({ post }: PostCardProps) {
   return (
     <Card>
-      <Link href="#">
-        <a aria-label="Teste">
+      <Link href={`${SITE_URL}/posts/${post.slug}`}>
+        <a aria-label={post.title}>
           <Image
-            src="https://res.cloudinary.com/almerindopaixao/image/upload/v1605244650/small_Post_Azul_com_Titulo_Grande_de_Novembro_Azul_para_Redes_Sociais_84058d78b3.png"
-            alt="Teste"
+            src={post.cover.formats.small.url}
+            alt={post.title}
             width={280}
             height={190}
             layout="responsive"
+            loading="eager"
+            priority={true}
           />
         </a>
       </Link>
 
       <PostCardDetails>
+        <span>{formateDate(post.published_at)}</span>
         <Typography component="h2">
-          <Link href="#">
+          <Link href={`${SITE_URL}/posts/${post.slug}`}>
             <a arial-label="Mostrando últimos posts e vídeos no Github Profile">
-              Mostrando últimos posts e vídeos no Github Profile
+              {post.title}
             </a>
           </Link>
         </Typography>
 
-        <Typography component="subtitle2">
-          Como utilizar o github Actions para mandar seu profile atualizado e
-          bonito e lorem ipsun etc etc etc fdfdfd...
-        </Typography>
+        <Typography component="subtitle2">{post.description}</Typography>
 
         <ContainerPostDetails>
           <PublishDetails>
             <span>
-              Publicado por{' '}
-              <Link href="/">
-                <a>Angélica Pereira</a>
-              </Link>
+              Publicado por
+              {post.authors.map((author) => {
+                return (
+                  <>
+                    <br />
+                    <Link
+                      key={author.slug}
+                      href={`${SITE_URL}/autor/${author.slug}`}
+                    >
+                      <a>{author.name}</a>
+                    </Link>
+                  </>
+                );
+              })}
             </span>
-            <span>20 de novembro de 2020</span>
           </PublishDetails>
 
           <IconsDetails>
@@ -67,7 +80,7 @@ export function PostCard() {
                 </a>
               </Link>
             </div>
-            <Link href="/">
+            <Link href={`${SITE_URL}/posts/${post.slug}`}>
               <a aria-label="FaShare">
                 <FaShare />
               </a>

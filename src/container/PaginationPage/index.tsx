@@ -11,7 +11,7 @@ import { Pagination } from '../../components/Pagination';
 import { PaginationDescription } from '../../components/PaginationDescription';
 
 export type PaginationPageProps = {
-  posts?: PostData;
+  posts: PostData[];
   categoryName?: string;
   categorySlug?: string;
   tagName?: string;
@@ -25,6 +25,7 @@ export function PaginationPage({
   categorySlug = '',
   tagName = '',
   tagSlug = '',
+  posts,
 }: PaginationPageProps) {
   return (
     <>
@@ -32,12 +33,9 @@ export function PaginationPage({
       <MainContainer>
         <PaginationDescription category={categoryName} tag={tagName} />
         <GridLayout>
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
+          {posts.map((post) => {
+            return <PostCard key={post.slug} post={post} />;
+          })}
         </GridLayout>
         <Pagination {...pagination} category={categorySlug} tag={tagSlug} />
       </MainContainer>

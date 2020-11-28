@@ -79,7 +79,7 @@ export const FeaturedDatails = styled.div`
 export const AuthorDetails = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 
   img {
     border-radius: 100%;
@@ -109,31 +109,24 @@ export const AuthorDetails = styled.div`
   @media (max-width: 960px) {
     margin-bottom: 20px;
 
-    img {
-      width: 40px;
-      height: 40px;
-    }
-
     span {
       color: ${({ theme }) => theme.colors.white};
-      font-size: 10px;
-      font-weight: 300;
+      font-size: 12px;
+      font-weight: 400;
     }
 
     a {
-      font-size: 10px;
+      font-size: 12px;
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
 `;
 
 export const IconsContainer = styled.div`
-  position: relative;
-  float: right;
+  margin-top: 10px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
   min-width: 90px;
 
   span {
@@ -165,5 +158,6 @@ export const IconsContainer = styled.div`
 
   div {
     display: flex;
+    margin-right: 15px;
   }
 `;

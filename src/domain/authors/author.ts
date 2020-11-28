@@ -14,7 +14,7 @@ export type Author = {
   avatar: PostCover;
   amountOfPosts: string;
   slug: string;
-  posts: PostData[] & { category: number };
+  posts: PostData[];
 };
 
 export type AuthorSocialNetworks = {

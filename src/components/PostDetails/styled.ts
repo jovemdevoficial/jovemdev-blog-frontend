@@ -23,7 +23,7 @@ export const Container = styled.section`
   `}
 `;
 
-export const AuthorDetails = styled.div`
+export const SharedDetails = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,10 +31,6 @@ export const AuthorDetails = styled.div`
   flex-wrap: wrap-reverse;
 
   margin: ${({ theme }) => theme.spacings.medium} 0;
-
-  & + & {
-    margin-top: ${({ theme }) => theme.spacings.large};
-  }
 `;
 
 export const AuthorDescription = styled.div`

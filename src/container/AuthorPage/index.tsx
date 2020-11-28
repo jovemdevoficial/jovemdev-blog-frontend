@@ -36,7 +36,7 @@ export function AuthorPage({ author }: AuthorPageProps) {
         <Line />
         <GridLayout>
           {author.posts.map((post) => {
-            return <PostCard key={post.slug} />;
+            return <PostCard key={post.slug} post={post} />;
           })}
         </GridLayout>
       </MainContainer>

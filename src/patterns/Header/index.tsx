@@ -4,7 +4,11 @@ import { HeaderContainer } from './styled';
 import { HamburgerButton } from '../../components/HamburgerButton';
 import { Search } from '../../components/Search';
 
-export function Header() {
+export type HeaderProps = {
+  noSearch?: boolean;
+};
+
+export function Header({ noSearch }: HeaderProps) {
   return (
     <>
       <HeaderContainer>
@@ -12,7 +16,7 @@ export function Header() {
         <Link href="/">
           <a>{'< Jovem DEV />'}</a>
         </Link>
-        <Search />
+        {noSearch || <Search />}
       </HeaderContainer>
     </>
   );

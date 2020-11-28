@@ -1,7 +1,9 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllCategories } from '../../../../data/categories/get-all-categories';
+import { getAllPosts } from '../../../../data/posts/get-all-posts';
 import { Category } from '../../../../domain/categories/category';
 import { PaginationTypes } from '../../../../domain/posts/pagination';
+import { PostData } from '../../../../domain/posts/post';
 
 import { createArrayWithNumberOfPosts } from '../../../../utils/create-array-with-number-of-posts';
 import { postsPerPage } from '../../../../config/constants';
@@ -14,11 +16,13 @@ import { SITE_NAME, SITE_AUTHORS } from '../../../../config/api-config';
 export type DynamicCategoryProps = {
   pagination: PaginationTypes;
   category: Category;
+  posts: PostData[];
 };
 
 export default function DynamicCategory({
   category,
   pagination,
+  posts,
 }: DynamicCategoryProps) {
   return (
     <>
@@ -35,6 +39,7 @@ export default function DynamicCategory({
         pagination={pagination}
         categoryName={category.name}
         categorySlug={category.slug}
+        posts={posts}
       />
     </>
   );
@@ -45,28 +50,26 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const page = Number(ctx.params.number);
 
   const startFrom = (page - 1) * postsPerPage;
-  const stopTo = page * postsPerPage;
 
-  const urlQueryAllCategory = `slug=${categorySlug}`;
+  const urlQueryAllPosts = `_sort=id:desc&_start=${startFrom}&_limit=6&category.slug=${categorySlug}`;
 
-  const data = await getAllCategories(urlQueryAllCategory);
+  const data = await getAllPosts(urlQueryAllPosts);
 
   const pagination = await createPaginationObject({
     pageUrl: page,
-    numberOfPosts: data[0].posts.length,
+    numberOfPosts: data.length,
   });
 
-  data[0].posts.sort((a, b) => (b.id < a.id ? -1 : 1));
-
-  const category = {
-    ...data[0],
-    posts: data[0].posts.slice(startFrom, stopTo),
-  };
+  const posts = data.length > 0 ? data : {};
 
   return {
     props: {
-      category: data.length > 0 ? category : {},
+      category: {
+        slug: categorySlug,
+        name: posts[0].category.name,
+      },
       pagination,
+      posts,
     },
   };
 };

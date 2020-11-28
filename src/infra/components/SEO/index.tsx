@@ -38,7 +38,7 @@ export function SEO({
   return (
     <Head>
       <title>{title}</title>
-      <meta name="application-name" content="Jovem DEV Blog" />
+      <meta name="application-name" content="Jovem DEV" />
       <meta name="description" content={description} />
       <meta name="author" content={transformArrayToString(authors)} />
       <meta name="creator" content="Jovem DEV" />

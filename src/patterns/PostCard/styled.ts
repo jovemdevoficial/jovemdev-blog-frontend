@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Card = styled.div`
+  min-height: 496px;
   width: 280px;
   border-radius: 20px;
 
@@ -29,12 +30,6 @@ export const Card = styled.div`
     border-radius: 20px 20px 0 0;
   }
 
-  transition: transform 0.5s ease-in-out;
-
-  &:hover {
-    transform: translateY(-5%);
-  }
-
   @media (max-width: 960px) {
     justify-self: center;
 
@@ -47,11 +42,16 @@ export const Card = styled.div`
 `;
 
 export const PostCardDetails = styled.section`
-  margin-top: 20px;
-  padding: 0 10px 0 10px;
+  position: relative;
+  min-height: 306px;
+  margin: 20px 20px 0 20px;
+
+  h2 {
+    margin-top: 1rem;
+  }
 
   p {
-    padding: 15px 0 15px 0;
+    padding: 15px 0 25px 0;
   }
 
   a {
@@ -62,19 +62,29 @@ export const PostCardDetails = styled.section`
     text-decoration: underline;
   }
 
+  span {
+    display: block;
+    color: ${({ theme }) => theme.colors.secondary};
+    font: 300 ${({ theme }) => theme.font.sizes.small} Roboto, sans-serif;
+  }
+
   @media (max-width: 960px) {
     p {
-      padding: 10px 0 20px 0;
+      padding: 10px 0 35px 0;
     }
   }
 `;
 
 export const ContainerPostDetails = styled.div`
   margin-bottom: ${({ theme }) => theme.spacings.large};
+  position: absolute;
+  width: 100%;
+  min-height: 4rem;
+  bottom: 0;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const PublishDetails = styled.div`
@@ -85,10 +95,6 @@ export const PublishDetails = styled.div`
     display: block;
     color: ${({ theme }) => theme.colors.secondary};
     font: 300 ${({ theme }) => theme.font.sizes.small} Roboto, sans-serif;
-  }
-
-  span + span {
-    margin-top: 2px;
   }
 
   a {

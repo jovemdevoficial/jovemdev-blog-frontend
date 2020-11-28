@@ -1,7 +1,9 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllTags } from '../../../../data/tags/get-all-tags';
+import { getAllPosts } from '../../../../data/posts/get-all-posts';
 import { Tag } from '../../../../domain/tags/tag';
 import { PaginationTypes } from '../../../../domain/posts/pagination';
+import { PostData } from '../../../../domain/posts/post';
 
 import { createArrayWithNumberOfPosts } from '../../../../utils/create-array-with-number-of-posts';
 import { postsPerPage } from '../../../../config/constants';
@@ -14,9 +16,14 @@ import { SITE_NAME, SITE_AUTHORS } from '../../../../config/api-config';
 export type DynamicTagProps = {
   tag: Tag;
   pagination: PaginationTypes;
+  posts: PostData[];
 };
 
-export default function DynamicTag({ tag, pagination }: DynamicTagProps) {
+export default function DynamicTag({
+  tag,
+  pagination,
+  posts,
+}: DynamicTagProps) {
   return (
     <>
       <SEO
@@ -32,6 +39,7 @@ export default function DynamicTag({ tag, pagination }: DynamicTagProps) {
         pagination={pagination}
         tagName={tag.name}
         tagSlug={tag.slug}
+        posts={posts}
       />
     </>
   );
@@ -42,28 +50,26 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const page = Number(ctx.params.number);
 
   const startFrom = (page - 1) * postsPerPage;
-  const stopTo = page * postsPerPage;
 
-  const urlQueryAllTags = `slug=${tagSlug}`;
+  const urlQueryAllPosts = `_sort=id:desc&_start=${startFrom}&_limit=6&tags.slug=${tagSlug}`;
 
-  const data = await getAllTags(urlQueryAllTags);
+  const data = await getAllPosts(urlQueryAllPosts);
 
   const pagination = await createPaginationObject({
     pageUrl: page,
-    numberOfPosts: data[0].posts.length,
+    numberOfPosts: data.length,
   });
 
-  data[0].posts.sort((a, b) => (b.id < a.id ? -1 : 1));
-
-  const tag = {
-    ...data[0],
-    posts: data[0].posts.slice(startFrom, stopTo),
-  };
+  const posts = data.length > 0 ? data : {};
 
   return {
     props: {
-      tag: data.length > 0 ? tag : {},
+      tag: {
+        slug: tagSlug,
+        name: posts[0].tags[0].name,
+      },
       pagination,
+      posts,
     },
   };
 };

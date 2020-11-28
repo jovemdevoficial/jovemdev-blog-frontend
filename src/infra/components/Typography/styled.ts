@@ -31,7 +31,7 @@ export const Subtitle1 = styled.p`
 `;
 
 export const Subtitle2 = styled.p`
-  font: 300 14px Roboto, sans-serif;
+  font: 300 15px Roboto, sans-serif;
   line-height: 20px;
 `;
 

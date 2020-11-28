@@ -19,11 +19,42 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   data[0].posts.sort((a, b) => (b.id < a.id ? -1 : 1));
 
-  const author = data.length > 0 ? data[0] : {};
+  const author = data[0];
+
+  console.log(author);
 
   return {
     props: {
-      author,
+      author: {
+        name: author.name,
+        biography: author.biography,
+        slug: author.slug,
+        email: author.email,
+        social_networks: author.social_networks,
+        avatar: {
+          formats: {
+            thumbnail: {
+              url: author.avatar.formats.thumbnail.url,
+            },
+          },
+        },
+        posts: author.posts.map((post) => {
+          return {
+            title: post.title,
+            cover: {
+              formats: {
+                small: {
+                  url: post.cover.formats.small.url,
+                },
+              },
+            },
+            slug: post.slug,
+            published_at: post.published_at,
+            description: post.description,
+            authors: [{ name: author.name }, { slug: author.slug }],
+          };
+        }),
+      },
     },
   };
 };

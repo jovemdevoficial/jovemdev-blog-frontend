@@ -17,7 +17,7 @@ export type PagePostsProps = {
   pagination: PaginationTypes;
 };
 
-export default function PagePosts({ pagination }: PagePostsProps) {
+export default function PagePosts({ pagination, posts }: PagePostsProps) {
   return (
     <>
       <SEO
@@ -29,7 +29,7 @@ export default function PagePosts({ pagination }: PagePostsProps) {
         url={`${SITE_URL}/posts/page/${pagination.page}`}
         type="blog"
       />
-      <PaginationPage pagination={pagination} />
+      <PaginationPage posts={posts} pagination={pagination} />
     </>
   );
 }
