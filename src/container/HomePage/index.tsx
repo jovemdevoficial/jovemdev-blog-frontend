@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { v4 as uuidv4 } from 'uuid';
+
 import { FaShare, FaHeart } from 'react-icons/fa';
 
 import { PostData } from '../../domain/posts/post';
@@ -25,6 +27,8 @@ import { formateDate } from '../../utils/formate-data';
 
 import { MainContainer } from '../../components/MainContainer';
 import { GridLayout } from '../../components/GridLayout';
+import { SideNav } from '../../components/SideNav';
+import LightBox from '../../components/LightBox';
 
 export type HomePageProps = {
   posts: PostData[];
@@ -43,6 +47,9 @@ export function HomePage({ posts }: HomePageProps) {
         authors={SITE_AUTHORS}
       />
       <Header />
+      <SideNav />
+
+      <LightBox />
       <MainContainer>
         <Featured backgroundUrlResponsive={posts[0].cover.formats.large.url}>
           <FeaturedCover>
@@ -108,7 +115,7 @@ export function HomePage({ posts }: HomePageProps) {
         </Featured>
         <GridLayout>
           {posts.slice(1).map((post) => {
-            return <PostCard key={post.slug} post={post} />;
+            return <PostCard key={uuidv4()} post={post} />;
           })}
         </GridLayout>
       </MainContainer>

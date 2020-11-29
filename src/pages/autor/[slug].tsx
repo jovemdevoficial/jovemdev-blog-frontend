@@ -21,8 +21,6 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   const author = data[0];
 
-  console.log(author);
-
   return {
     props: {
       author: {

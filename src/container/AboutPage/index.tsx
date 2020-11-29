@@ -12,6 +12,8 @@ import { AboutDescription, InstagramDescription } from './styled';
 
 import aboutImage from '../../assets/svgs/about.svg';
 import InstagramImage from '../../assets/images/imagem-de-perfil-do-instagram-do-jovemdev.png';
+import { SideNav } from '../../components/SideNav';
+import LightBox from '../../components/LightBox';
 
 export function AboutPage() {
   return (
@@ -26,6 +28,9 @@ export function AboutPage() {
         url={`${SITE_URL}/sobre/`}
       />
       <Header />
+      <SideNav />
+
+      <LightBox />
       <MainContainer>
         <AboutDescription>
           <div>

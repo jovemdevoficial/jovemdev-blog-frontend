@@ -24,7 +24,8 @@
     "react-instantsearch-dom": "^6.8.2",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
@@ -37,6 +38,7 @@
     "@types/react": "^16.9.56",
     "@types/react-instantsearch-dom": "^6.8.0",
     "@types/styled-components": "^5.1.4",
+    "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
     "axios": "^0.21.0",

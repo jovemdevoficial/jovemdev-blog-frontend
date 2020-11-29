@@ -12,10 +12,44 @@ export default function Home({ posts }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const urlQuery = '_sort=id:desc&_start=0&_limit=7';
+  const urlQuery = '_sort=id:desc';
   const posts = await getAllPosts(urlQuery);
 
+  const slice = posts.slice(0, 7);
+
   return {
-    props: { posts },
+    props: {
+      posts: slice.map((post) => {
+        return {
+          title: post.title,
+          description: post.description,
+          cover: {
+            formats: {
+              small: {
+                url: post.cover.formats.small.url,
+              },
+              large: {
+                url: post.cover.formats.large.url,
+              },
+            },
+          },
+          slug: post.slug,
+          published_at: post.published_at,
+          authors: post.authors.map((author) => {
+            return {
+              name: author.name,
+              slug: author.slug,
+              avatar: {
+                formats: {
+                  thumbnail: {
+                    url: author.avatar.formats.thumbnail.url,
+                  },
+                },
+              },
+            };
+          }),
+        };
+      }),
+    },
   };
 };

@@ -8,15 +8,12 @@ export const HeaderContainer = styled.header`
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     a {
       color: ${theme.colors.white};
-      font-weight: 700;
-      font-size: ${theme.font.sizes.large};
+      font: 600 ${theme.font.sizes.large} Poppins;
       transition: color 0.5s ease-in-out;
-      position: absolute;
-      left: 44%;
     }
 
     a:hover {
@@ -26,11 +23,5 @@ export const HeaderContainer = styled.header`
 
   @media (max-width: 960px) {
     border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
-  }
-
-  @media (max-width: 580px) {
-    a {
-      display: none;
-    }
   }
 `;

@@ -30,6 +30,9 @@ import { API_KEY, APP_ID, INDEX_NAME } from '../../config/algolia-config';
 
 import BackgroundImage from '../../assets/svgs/imagem-de-fundo-da-pagina-de-pesquisa-do-blog-jovem-dev.svg';
 
+import { SideNav } from '../../components/SideNav';
+import LightBox from '../../components/LightBox';
+
 export function SearchPage() {
   const searchClient = algoliasearch(APP_ID, API_KEY);
 
@@ -44,7 +47,10 @@ export function SearchPage() {
         type="blog"
         url={`${SITE_URL}/pesquisa`}
       />
-      <Header noSearch />
+      <Header />
+      <SideNav />
+
+      <LightBox />
       <BackgroundContainer>
         <div></div>
         <img

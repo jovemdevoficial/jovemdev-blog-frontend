@@ -9,6 +9,8 @@ import { GridLayout } from '../../components/GridLayout';
 import { PostCard } from '../../patterns/PostCard';
 import { Pagination } from '../../components/Pagination';
 import { PaginationDescription } from '../../components/PaginationDescription';
+import { SideNav } from '../../components/SideNav';
+import LightBox from '../../components/LightBox';
 
 export type PaginationPageProps = {
   posts: PostData[];
@@ -30,6 +32,9 @@ export function PaginationPage({
   return (
     <>
       <Header />
+      <SideNav />
+
+      <LightBox />
       <MainContainer>
         <PaginationDescription category={categoryName} tag={tagName} />
         <GridLayout>

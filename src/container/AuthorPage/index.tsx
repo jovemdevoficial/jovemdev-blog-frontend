@@ -13,6 +13,8 @@ import { GridLayout } from '../../components/GridLayout';
 import { PostCard } from '../../patterns/PostCard';
 
 import { Line } from './styled';
+import { SideNav } from '../../components/SideNav';
+import LightBox from '../../components/LightBox';
 
 export type AuthorPageProps = {
   author: Author;
@@ -31,6 +33,9 @@ export function AuthorPage({ author }: AuthorPageProps) {
         url={`${SITE_URL}/autor/${author.slug}`}
       />
       <Header />
+      <SideNav />
+
+      <LightBox />
       <MainContainer>
         <AuthorDetails author={author} />
         <Line />

@@ -14,6 +14,8 @@ import { Container } from './styled';
 import pageNotFound from '../../assets/svgs/page_not_found.svg';
 
 import { SITE_NAME, SITE_AUTHORS } from '../../config/api-config';
+import { SideNav } from '../../components/SideNav';
+import LightBox from '../../components/LightBox';
 
 export function Page404() {
   return (
@@ -27,6 +29,9 @@ export function Page404() {
         site_name={SITE_NAME}
       />
       <Header />
+      <SideNav />
+
+      <LightBox />
       <Container>
         <Image
           src={pageNotFound}

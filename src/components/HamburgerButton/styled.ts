@@ -3,9 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
   height: ${({ theme }) => theme.spacings.extraLarge};
   width: ${({ theme }) => theme.spacings.extraLarge};
+
+  position: absolute;
+  left: 0;
+
+  z-index: 4;
 `;
 
-export const LabelHamburger = styled.label`
+export const LabelHamburger = styled.span`
   cursor: pointer;
 
   div {
@@ -42,21 +47,17 @@ export const Hamburger = styled.span`
   &::after {
     bottom: -10px;
   }
-`;
 
-export const InputHamburger = styled.input`
-  display: none;
-
-  &:checked ~ label ${Hamburger} {
+  &.hamburger-close {
     transform: rotate(45deg);
   }
 
-  &:checked ~ label ${Hamburger}::before {
+  &.hamburger-close::before {
     transform: rotate(90deg);
     top: 0;
   }
 
-  &:checked ~ label ${Hamburger}::after {
+  &.hamburger-close::after {
     transform: rotate(90deg);
     bottom: 0;
   }

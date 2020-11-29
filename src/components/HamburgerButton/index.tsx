@@ -1,11 +1,28 @@
-import { Container, Hamburger, InputHamburger, LabelHamburger } from './styled';
+import { Container, Hamburger, LabelHamburger } from './styled';
+
+// styled__ContainerNav-sc-1d3hzru-0 jwxCEL
 
 export function HamburgerButton() {
+  function handleClick() {
+    const sideNav = window.document.querySelector(
+      '.styled__ContainerNav-sc-1d3hzru-0',
+    );
+
+    const hamburgerDiv = window.document.querySelector(
+      '.styled__Hamburger-gbonng-2',
+    );
+
+    const lightBox = window.document.querySelector('.LightBox-sc-1nx0ljj-0');
+
+    hamburgerDiv.classList.toggle('hamburger-close');
+    sideNav.classList.toggle('nav-responsive');
+    lightBox.classList.toggle('bg');
+  }
+
   return (
     <Container>
-      <InputHamburger id="menu-hamburger" type="checkbox" />
-      <LabelHamburger htmlFor="menu-hamburger">
-        <div>
+      <LabelHamburger>
+        <div onClick={handleClick}>
           <Hamburger />
         </div>
       </LabelHamburger>

@@ -14,6 +14,8 @@ import { SITE_NAME, SITE_URL } from '../../config/api-config';
 import { PostData } from '../../domain/posts/post';
 
 import { WritterBy } from './styled';
+import { SideNav } from '../../components/SideNav';
+import LightBox from '../../components/LightBox';
 
 export type HomePageProps = {
   post: PostData;
@@ -36,6 +38,9 @@ export function PostPage({ post }: HomePageProps) {
         updated_time={post.updated_at}
       />
       <Header />
+      <SideNav />
+
+      <LightBox />
       <MainContainer>
         <PostDetails post={post} />
         <PostContainer content={post.content} />
