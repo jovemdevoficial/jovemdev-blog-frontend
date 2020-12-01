@@ -3,8 +3,6 @@ import Image from 'next/image';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { FaShare, FaHeart } from 'react-icons/fa';
-
 import { PostData } from '../../domain/posts/post';
 
 import {
@@ -12,7 +10,7 @@ import {
   FeaturedCover,
   FeaturedDatails,
   AuthorDetails,
-  IconsContainer,
+  SeeMore,
 } from './styled';
 
 import { SEO } from '../../infra/components/SEO';
@@ -24,17 +22,25 @@ import { PostCard } from '../../patterns/PostCard';
 
 import { SITE_NAME, SITE_URL, SITE_AUTHORS } from '../../config/api-config';
 import { formateDate } from '../../utils/formate-data';
+import { jsonLdHomePage } from '../../lib/json-ld-home-page';
 
 import { MainContainer } from '../../components/MainContainer';
 import { GridLayout } from '../../components/GridLayout';
 import { SideNav } from '../../components/SideNav';
 import LightBox from '../../components/LightBox';
 
+import FacebookImageDefault from '../../assets/images/logo-image-facebook-1200x628.png';
+import FacebookImageLarge from '../../assets/images/logo-image-facebook-1000x1000.png';
+import FacebookImageSmall from '../../assets/images/logo-image-facebook-500x500.png';
+import TwitterImage from '../../assets/images/logo-image-twitter-150x150.png';
+
 export type HomePageProps = {
   posts: PostData[];
 };
 
 export function HomePage({ posts }: HomePageProps) {
+  const jsonLd = jsonLdHomePage({ posts });
+
   return (
     <>
       <SEO
@@ -45,7 +51,16 @@ export function HomePage({ posts }: HomePageProps) {
         type="blog"
         site_name="Jovem Dev"
         authors={SITE_AUTHORS}
-      />
+        image_default={FacebookImageDefault}
+        image_large={FacebookImageLarge}
+        image_small={FacebookImageSmall}
+        image_twitter={TwitterImage}
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        ></script>
+      </SEO>
       <Header />
       <SideNav />
 
@@ -53,14 +68,18 @@ export function HomePage({ posts }: HomePageProps) {
       <MainContainer>
         <Featured backgroundUrlResponsive={posts[0].cover.formats.large.url}>
           <FeaturedCover>
-            <Image
-              src={posts[0].cover.formats.small.url}
-              alt={posts[0].title}
-              width={400}
-              height={400}
-              loading="eager"
-              priority={true}
-            />
+            <Link href="/posts/[slug]" as={`/posts/${posts[0].slug}`}>
+              <a aria-label={posts[0].title}>
+                <Image
+                  src={posts[0].cover.formats.small.url}
+                  alt={posts[0].title}
+                  width={400}
+                  height={400}
+                  loading="eager"
+                  priority={true}
+                />
+              </a>
+            </Link>
           </FeaturedCover>
 
           <FeaturedDatails>
@@ -87,30 +106,15 @@ export function HomePage({ posts }: HomePageProps) {
               </div>
             </AuthorDetails>
 
-            <Typography component="h1">{posts[0].title}</Typography>
+            <Typography component="h1">
+              <Link href="/posts/[slug]" as={`/posts/${posts[0].slug}`}>
+                <a>{posts[0].title}</a>
+              </Link>
+            </Typography>
 
             <Typography component="subtitle1">
               {posts[0].description}
             </Typography>
-
-            <IconsContainer>
-              <div>
-                <span>10</span>
-                <a
-                  aria-label="Ícone de curtidas"
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${SITE_URL}/posts/${posts[0].slug}`}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FaHeart />
-                </a>
-              </div>
-              <Link href="/">
-                <a aria-label="Ícon de compartilhamento">
-                  <FaShare />
-                </a>
-              </Link>
-            </IconsContainer>
           </FeaturedDatails>
         </Featured>
         <GridLayout>
@@ -118,6 +122,13 @@ export function HomePage({ posts }: HomePageProps) {
             return <PostCard key={uuidv4()} post={post} />;
           })}
         </GridLayout>
+        <SeeMore>
+          <Link href="/posts/page/1">
+            <a>
+              <span>Ver mais</span>
+            </a>
+          </Link>
+        </SeeMore>
       </MainContainer>
       <Footer />
     </>

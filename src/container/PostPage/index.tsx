@@ -8,20 +8,47 @@ import { PostContainer } from '../../components/PostContainer';
 import { PostDetails } from '../../components/PostDetails';
 import { ClassificationContainer } from '../../components/ClassificationContainer';
 import { AuthorCard } from '../../components/AuthorCard';
+import { SideNav } from '../../components/SideNav';
+import { Comments } from '../../components/Comments';
+import LightBox from '../../components/LightBox';
 
 import { SITE_NAME, SITE_URL } from '../../config/api-config';
-
+import { jsonLdPostPage } from '../../lib/json-ld-post-page';
 import { PostData } from '../../domain/posts/post';
 
+import FacebookImageDefault from '../../assets/images/logo-image-facebook-1200x628.png';
+import FacebookImageLarge from '../../assets/images/logo-image-facebook-1000x1000.png';
+import FacebookImageSmall from '../../assets/images/logo-image-facebook-500x500.png';
+import TwitterImage from '../../assets/images/logo-image-twitter-150x150.png';
+
 import { WritterBy } from './styled';
-import { SideNav } from '../../components/SideNav';
-import LightBox from '../../components/LightBox';
 
 export type HomePageProps = {
   post: PostData;
 };
 
 export function PostPage({ post }: HomePageProps) {
+  const configJson = {
+    title: post.title,
+    authors: post.authors,
+    category: post.category,
+    tags: post.tags,
+    dateCreated: post.created_at,
+    dateModified: post.updated_at,
+    datePublished: post.published_at,
+    image: [
+      post.cover.formats.thumbnail.url,
+      post.cover.formats.small.url,
+      post.cover.formats.medium.url,
+      post.cover.formats.large.url,
+    ],
+    slug: post.slug,
+    description: post.description,
+    seo: post.seo,
+  };
+
+  const jsonLd = jsonLdPostPage(configJson);
+
   return (
     <>
       <SEO
@@ -35,8 +62,21 @@ export function PostPage({ post }: HomePageProps) {
         category={post.category.name}
         tags={post.tags}
         published_time={post.published_at}
-        updated_time={post.updated_at}
-      />
+        modified_time={post.updated_at}
+        image_default={FacebookImageDefault}
+        image_large={FacebookImageLarge}
+        image_small={FacebookImageSmall}
+        image_twitter={TwitterImage}
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd[0]) }}
+        ></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd[1]) }}
+        ></script>
+      </SEO>
       <Header />
       <SideNav />
 
@@ -49,6 +89,7 @@ export function PostPage({ post }: HomePageProps) {
         {post.authors.map((author) => (
           <AuthorCard key={author.slug} author={author} />
         ))}
+        <Comments slug={post.slug} title={post.title} />
       </MainContainer>
       <Footer />
     </>

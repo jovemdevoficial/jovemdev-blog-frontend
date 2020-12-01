@@ -1,6 +1,8 @@
 import Image from 'next/image';
 
 import { SITE_NAME, SITE_URL, SITE_AUTHORS } from '../../config/api-config';
+import { jsonLdAboutPage } from '../../lib/json-ld-about-page';
+
 import { SEO } from '../../infra/components/SEO';
 import { Typography } from '../../infra/components/Typography';
 
@@ -8,14 +10,21 @@ import { Footer } from '../../patterns/Footer';
 import { Header } from '../../patterns/Header';
 
 import { MainContainer } from '../../components/MainContainer';
+import { SideNav } from '../../components/SideNav';
+import LightBox from '../../components/LightBox';
+
 import { AboutDescription, InstagramDescription } from './styled';
 
 import aboutImage from '../../assets/svgs/about.svg';
 import InstagramImage from '../../assets/images/imagem-de-perfil-do-instagram-do-jovemdev.png';
-import { SideNav } from '../../components/SideNav';
-import LightBox from '../../components/LightBox';
+import FacebookImageDefault from '../../assets/images/logo-image-facebook-1200x628.png';
+import FacebookImageLarge from '../../assets/images/logo-image-facebook-1000x1000.png';
+import FacebookImageSmall from '../../assets/images/logo-image-facebook-500x500.png';
+import TwitterImage from '../../assets/images/logo-image-twitter-150x150.png';
 
 export function AboutPage() {
+  const jsonLd = jsonLdAboutPage();
+
   return (
     <>
       <SEO
@@ -26,7 +35,17 @@ export function AboutPage() {
         type="blog"
         authors={SITE_AUTHORS}
         url={`${SITE_URL}/sobre/`}
-      />
+        image_default={FacebookImageDefault}
+        image_large={FacebookImageLarge}
+        image_small={FacebookImageSmall}
+        image_twitter={TwitterImage}
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        ></script>
+      </SEO>
+
       <Header />
       <SideNav />
 

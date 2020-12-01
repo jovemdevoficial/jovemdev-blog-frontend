@@ -21,8 +21,8 @@ export function PaginationDescription({
       </Typography>
       <Typography component="subtitle1">
         Gostou do conteúdo não foi? Então confira abaixo todos os nossos posts
-        {category ? ` da categoria ${category}` : tag && ` da tag ${tag}`}
-        {' :)'}
+        {category ? ` da categoria ${category}` : tag && ` da tag ${tag}`}{' '}
+        &#128516; &#128151;
       </Typography>
     </Container>
   );

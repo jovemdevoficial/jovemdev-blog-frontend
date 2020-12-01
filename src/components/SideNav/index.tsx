@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import {
   FaHome,
-  FaEnvelope,
   FaSearch,
   FaTags,
   FaFolderOpen,
   FaBook,
+  FaStickyNote,
 } from 'react-icons/fa';
 
 import { ContainerNav } from './styled';
@@ -15,42 +15,49 @@ export function SideNav() {
     <ContainerNav>
       <Link href="/">
         <a aria-label="Home">
-          <FaHome size={36} />
+          <FaHome size={34} />
           <span>Home</span>
         </a>
       </Link>
 
-      <Link href="/404">
+      {/*<Link href="/404">
         <a aria-label="Newsletter">
           <FaEnvelope size={36} />
           <span>Newsletter</span>
         </a>
-      </Link>
+       </Link>*/}
 
       <Link href="/pesquisar">
         <a aria-label="Pesquisar">
-          <FaSearch size={36} />
+          <FaSearch size={34} />
           <span>Pesquisar</span>
+        </a>
+      </Link>
+
+      <Link href="/posts/page/1">
+        <a aria-label="Posts">
+          <FaStickyNote size={34} />
+          <span>Posts</span>
         </a>
       </Link>
 
       <Link href="/categorias">
         <a aria-label="Categorias">
-          <FaFolderOpen size={36} />
+          <FaFolderOpen size={34} />
           <span>Categorias</span>
         </a>
       </Link>
 
       <Link href="/tags">
         <a aria-label="Tags">
-          <FaTags size={36} />
+          <FaTags size={34} />
           <span>Tags</span>
         </a>
       </Link>
 
       <Link href="/sobre">
         <a aria-label="Sobre">
-          <FaBook size={36} />
+          <FaBook size={34} />
           <span>Sobre</span>
         </a>
       </Link>

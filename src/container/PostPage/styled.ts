@@ -10,5 +10,9 @@ export const WritterBy = styled.h4`
     @media (max-width: 960px) {
       margin: ${theme.spacings.large} ${theme.spacings.medium};
     }
+
+    @media (max-width: 960px) {
+      font-size: 2.5rem;
+    }
   `}
 `;

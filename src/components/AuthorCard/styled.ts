@@ -16,7 +16,7 @@ export const Container = styled.div`
   margin: 7rem 0;
 
   @media (max-width: 960px) {
-    margin: 7rem ${({ theme }) => theme.spacings.medium};
+    margin: 10rem ${({ theme }) => theme.spacings.medium};
 
     flex-direction: column;
 
@@ -46,16 +46,38 @@ export const AuthorDescription = styled.div`
     line-height: 38px;
   }
 
+  span {
+    margin-top: 1rem;
+    font: 300 1.6rem Poppins, sans-serif;
+    color: ${({ theme }) => theme.colors.lightGray};
+  }
+
   p {
     font: 400 ${({ theme }) => theme.font.sizes.medium} Poppins, sans-serif;
     margin: ${({ theme }) => theme.spacings.medium} 0;
+    line-height: 4rem;
 
     text-align: justify;
   }
 
   @media (max-width: 960px) {
+    div {
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+    }
+
     h3 {
       text-align: center;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p {
+      margin: ${({ theme }) => theme.spacings.large} 0;
     }
   }
 `;

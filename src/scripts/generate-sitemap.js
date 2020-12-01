@@ -39,7 +39,9 @@ const generateSiteMap = async () => {
           return `
           <url>
             <loc>${SITE_URL}${route}/</loc>
+            <lastmod>${new Date().toISOString()}</lastmod>
             <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
           </url>
         `;
         })

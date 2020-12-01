@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Card = styled.div`
   min-height: 496px;
@@ -28,6 +28,12 @@ export const Card = styled.div`
 
   img {
     border-radius: 20px 20px 0 0;
+  }
+
+  transition: opacity 0.5s ease-in-out;
+
+  img:hover {
+    opacity: 0.8;
   }
 
   @media (max-width: 960px) {
@@ -107,6 +113,7 @@ export const PublishDetails = styled.div`
   }
 `;
 
+/*
 export const IconsDetails = styled.div`
   width: 70px;
 
@@ -141,3 +148,4 @@ export const IconsDetails = styled.div`
     `}
   }
 `;
+*/

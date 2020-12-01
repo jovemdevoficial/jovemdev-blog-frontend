@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export type FeaturedProps = {
   backgroundUrlResponsive: string;
@@ -12,6 +12,16 @@ export const Featured = styled.section<FeaturedProps>`
   justify-content: space-between;
 
   margin-bottom: ${({ theme }) => theme.spacings.superLarge};
+
+  h1 {
+    a {
+      color: ${({ theme }) => theme.colors.secondary};
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
 
   @media (max-width: 960px) {
     position: relative;
@@ -32,6 +42,12 @@ export const Featured = styled.section<FeaturedProps>`
       height: 100%;
       background: rgba(24, 20, 20, 0.7);
     }
+
+    h1 {
+      a {
+        color: ${({ theme }) => theme.colors.white};
+      }
+    }
   }
 `;
 
@@ -39,8 +55,14 @@ export const FeaturedCover = styled.div`
   max-height: 400px;
   max-width: 400px;
 
+  transition: opacity 0.5s ease-in-out;
+
   img {
     border-radius: 40px;
+  }
+
+  img:hover {
+    opacity: 0.8;
   }
 
   @media (max-width: 960px) {
@@ -56,18 +78,20 @@ export const FeaturedDatails = styled.div`
     color: ${({ theme }) => theme.colors.white};
     width: 100%;
     padding: ${({ theme }) => theme.spacings.medium};
+
     h1 {
       font-size: ${({ theme }) => theme.font.sizes.superLarge};
     }
 
     p {
-      font-size: ${({ theme }) => theme.font.sizes.medium};
+      margin-top: 2rem;
+      font-size: ${({ theme }) => theme.font.sizes.large};
     }
   }
 
   @media (max-width: 320px) {
     h1 {
-      font-size: 20px;
+      font-size: 2rem;
     }
 
     p {
@@ -122,18 +146,52 @@ export const AuthorDetails = styled.div`
   }
 `;
 
+export const SeeMore = styled.div`
+  margin: 5rem 0 3rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    cursor: pointer;
+
+    transition: color 0.5s ease-in-out;
+
+    border: 1px solid ${({ theme }) => theme.colors.secondary};
+    padding: 0.5rem 2rem;
+
+    border-radius: 1rem;
+
+    color: ${({ theme }) => theme.colors.secondary};
+
+    span {
+      font: 400 2rem Roboto, sans-serif;
+      line-height: 4rem;
+    }
+
+    svg {
+      font-size: 2rem;
+    }
+  }
+
+  a:hover {
+    border-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (max-width: 960px) {
+    margin: 4rem 2rem 3rem 2rem;
+  }
+`;
+
+/*
 export const IconsContainer = styled.div`
   margin-top: 10px;
 
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   min-width: 90px;
-
-  span {
-    font-weight: 300;
-    font-size: ${({ theme }) => theme.font.sizes.large};
-    margin-right: 5px;
-  }
 
   a {
     display: flex;
@@ -155,9 +213,5 @@ export const IconsContainer = styled.div`
       }
     `}
   }
-
-  div {
-    display: flex;
-    margin-right: 15px;
-  }
 `;
+*/

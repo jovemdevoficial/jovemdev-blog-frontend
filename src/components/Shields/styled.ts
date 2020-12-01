@@ -5,9 +5,9 @@ export type ContainerProps = {
 };
 
 export const Container = styled.div<ContainerProps>`
-  min-width: 120px;
-  font: 600 1.8rem Roboto, sans-serif;
-  padding: 1rem;
+  min-width: 125px;
+  font: 600 2rem Roboto, sans-serif;
+  padding: 1rem 2rem;
 
   background-color: ${({ color }) => color};
   color: ${({ theme }) => theme.colors.white};
@@ -15,6 +15,21 @@ export const Container = styled.div<ContainerProps>`
   border-radius: 10px;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
+  svg {
+    font-size: 2.3rem;
+  }
+
+  span {
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 960px) {
+    padding: 2rem 2rem;
+
+    span {
+      margin-left: 2rem;
+    }
+  }
 `;

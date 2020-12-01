@@ -14,21 +14,8 @@
     >
     <link>http://localhost:3000</link>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 26 Nov 2020 01:16:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 29 Nov 2020 21:53:42 GMT</lastBuildDate>
     <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml" />
-    
-      <item>
-        <title>
-          &lt;![CDATA[ teste2 ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ uma nofavafasfas fsafasfsf afadsfasffffffffffffff fsfasfasfas fasfasfasfas fasfas  ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/teste2/</link>
-        <pubDate>Fri, 13 Nov 2020 05:36:53 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/teste2/</guid>
-        <content:encoded />
-      </item>
     
       <item>
         <title>
@@ -61,6 +48,19 @@ traxit ]]&gt;
     
       <item>
         <title>
+          &lt;![CDATA[ teste24 ]]&gt;
+        </title>
+        <description>
+          &lt;![CDATA[ uma nofavafasfas fsafasfsf afadsfasffffffffffffff fsfasfasfas fasfasfasfas fasfas  ]]&gt;
+        </description>
+        <link>http://localhost:3000/posts/teste2/</link>
+        <pubDate>Fri, 13 Nov 2020 05:36:53 GMT</pubDate>
+        <guid isPermaLink="false">http://localhost:3000/posts/teste2/</guid>
+        <content:encoded />
+      </item>
+    
+      <item>
+        <title>
           &lt;![CDATA[ teste 54 ]]&gt;
         </title>
         <description>
@@ -76,7 +76,7 @@ datis aequaret dum, coniunx tacitaque egere te carendum,
     
       <item>
         <title>
-          &lt;![CDATA[ Entre criar um Blog Pessoal com Gatsby e usar o Medium… por que não ter os dois? ]]&gt;
+          &lt;![CDATA[ Entre criar um Blog Pessoal com Gatsby e usar o Medium…  ]]&gt;
         </title>
         <description>
           &lt;![CDATA[ Uma das features mais interessantes do React foi finalmente lançada, o famoso Hooks! Por que é tão legal assim? ]]&gt;
@@ -84,6 +84,32 @@ datis aequaret dum, coniunx tacitaque egere te carendum,
         <link>http://localhost:3000/posts/entre-criar-um-blog-pessoal-com-gatsby-e-usar-o-medium-por-que-nao-ter-os-dois/</link>
         <pubDate>Mon, 23 Nov 2020 02:48:14 GMT</pubDate>
         <guid isPermaLink="false">http://localhost:3000/posts/entre-criar-um-blog-pessoal-com-gatsby-e-usar-o-medium-por-que-nao-ter-os-dois/</guid>
+        <content:encoded />
+      </item>
+    
+      <item>
+        <title>
+          &lt;![CDATA[ Um poste teste para texto e saber o maximo de caracteres dss ]]&gt;
+        </title>
+        <description>
+          &lt;![CDATA[ Cara pelo amor de deus, faça essa descrição direito, ja tou com a cabeça doida mermão, mas eu tenho que continuar falando besteira, pois são muitos caract ]]&gt;
+        </description>
+        <link>http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss/</link>
+        <pubDate>Fri, 27 Nov 2020 23:38:31 GMT</pubDate>
+        <guid isPermaLink="false">http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss/</guid>
+        <content:encoded />
+      </item>
+    
+      <item>
+        <title>
+          &lt;![CDATA[ Conheça o react-icons. Uma biblioteca de icones famosos. ]]&gt;
+        </title>
+        <description>
+          &lt;![CDATA[ O react-icons é um pacote muito utilizado no desenvolvimento de aplicações React, o mesmo provem a junção de bibliote ]]&gt;
+        </description>
+        <link>http://localhost:3000/posts/conheca-o-react-icons-uma-biblioteca-de-icones-famosos/</link>
+        <pubDate>Thu, 26 Nov 2020 22:38:50 GMT</pubDate>
+        <guid isPermaLink="false">http://localhost:3000/posts/conheca-o-react-icons-uma-biblioteca-de-icones-famosos/</guid>
         <content:encoded />
       </item>
     
@@ -126,6 +152,32 @@ timorem.  ]]&gt;
         <link>http://localhost:3000/posts/teste-4/</link>
         <pubDate>Sun, 15 Nov 2020 01:13:57 GMT</pubDate>
         <guid isPermaLink="false">http://localhost:3000/posts/teste-4/</guid>
+        <content:encoded />
+      </item>
+    
+      <item>
+        <title>
+          &lt;![CDATA[ Um poste teste para texto e saber o maximo de caracteres dss ]]&gt;
+        </title>
+        <description>
+          &lt;![CDATA[ Cara pelo amor de deus, faça essa descrição direito, ja tou com a cabeça doida mermão, mas eu tenho que continuar falando besteira, pois são muitos caract ]]&gt;
+        </description>
+        <link>http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-2/</link>
+        <pubDate>Sat, 28 Nov 2020 00:02:56 GMT</pubDate>
+        <guid isPermaLink="false">http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-2/</guid>
+        <content:encoded />
+      </item>
+    
+      <item>
+        <title>
+          &lt;![CDATA[ Um poste teste para texto e saber o maximo de caracteres dss ]]&gt;
+        </title>
+        <description>
+          &lt;![CDATA[ Cara pelo amor de deus, faça essa descrição direito, ja tou com a cabeça doida mermão, mas eu tenho que continuar falando besteira, pois são muitos caract ]]&gt;
+        </description>
+        <link>http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-1/</link>
+        <pubDate>Fri, 27 Nov 2020 23:41:59 GMT</pubDate>
+        <guid isPermaLink="false">http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-1/</guid>
         <content:encoded />
       </item>
     

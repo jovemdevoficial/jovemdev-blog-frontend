@@ -5,7 +5,7 @@ export const TAGS_URL = `${API_URL}/tags`;
 export const AUTHORS_URL = `${API_URL}/authors`;
 
 export const SITE_NAME = 'Jovem Dev';
-export const SITE_URL = 'http://localhost:3000';
+export const SITE_URL = 'https://www.jovemdev.com';
 export const SITE_AUTHORS = [
   { name: 'Almerindo Paixão' },
   { name: 'Angélica Pereira' },

@@ -29,6 +29,10 @@ import { SITE_NAME, SITE_AUTHORS, SITE_URL } from '../../config/api-config';
 import { API_KEY, APP_ID, INDEX_NAME } from '../../config/algolia-config';
 
 import BackgroundImage from '../../assets/svgs/imagem-de-fundo-da-pagina-de-pesquisa-do-blog-jovem-dev.svg';
+import FacebookImageDefault from '../../assets/images/logo-image-facebook-1200x628.png';
+import FacebookImageLarge from '../../assets/images/logo-image-facebook-1000x1000.png';
+import FacebookImageSmall from '../../assets/images/logo-image-facebook-500x500.png';
+import TwitterImage from '../../assets/images/logo-image-twitter-150x150.png';
 
 import { SideNav } from '../../components/SideNav';
 import LightBox from '../../components/LightBox';
@@ -46,6 +50,10 @@ export function SearchPage() {
         keywords="Pesquisa, blog"
         type="blog"
         url={`${SITE_URL}/pesquisa`}
+        image_default={FacebookImageDefault}
+        image_large={FacebookImageLarge}
+        image_small={FacebookImageSmall}
+        image_twitter={TwitterImage}
       />
       <Header />
       <SideNav />

@@ -34,6 +34,9 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
             thumbnail: {
               url: author.avatar.formats.thumbnail.url,
             },
+            small: {
+              url: author.avatar.formats.small.url,
+            },
           },
         },
         posts: author.posts.map((post) => {

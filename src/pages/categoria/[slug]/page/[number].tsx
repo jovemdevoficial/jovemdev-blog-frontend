@@ -1,17 +1,30 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllCategories } from '../../../../data/categories/get-all-categories';
 import { getAllPosts } from '../../../../data/posts/get-all-posts';
+
 import { Category } from '../../../../domain/categories/category';
 import { PaginationTypes } from '../../../../domain/posts/pagination';
 import { PostData } from '../../../../domain/posts/post';
 
-import { createArrayWithNumberOfPosts } from '../../../../utils/create-array-with-number-of-posts';
-import { postsPerPage } from '../../../../config/constants';
 import { createPaginationObject } from '../../../../utils/create-pagination-object';
+import { createArrayWithNumberOfPosts } from '../../../../utils/create-array-with-number-of-posts';
+
+import { postsPerPage } from '../../../../config/constants';
+import {
+  SITE_NAME,
+  SITE_AUTHORS,
+  SITE_URL,
+} from '../../../../config/api-config';
+
+import { jsonLdPaginationPage } from '../../../../lib/json-ld-pagination-page';
 
 import { PaginationPage } from '../../../../container/PaginationPage';
 import { SEO } from '../../../../infra/components/SEO';
-import { SITE_NAME, SITE_AUTHORS } from '../../../../config/api-config';
+
+import FacebookImageDefault from '../../../../assets/images/logo-image-facebook-1200x628.png';
+import FacebookImageLarge from '../../../../assets/images/logo-image-facebook-1000x1000.png';
+import FacebookImageSmall from '../../../../assets/images/logo-image-facebook-500x500.png';
+import TwitterImage from '../../../../assets/images/logo-image-twitter-150x150.png';
 
 export type DynamicCategoryProps = {
   pagination: PaginationTypes;
@@ -24,6 +37,8 @@ export default function DynamicCategory({
   pagination,
   posts,
 }: DynamicCategoryProps) {
+  const jsonLd = jsonLdPaginationPage({ posts });
+
   return (
     <>
       <SEO
@@ -33,8 +48,14 @@ export default function DynamicCategory({
         authors={SITE_AUTHORS}
         keywords="Tags, Blog"
         type="blog"
-        url={`http://localhost:3000/categoria/${category.slug}/page/${pagination.page}`}
-      />
+        url={`${SITE_URL}/categoria/${category.slug}/page/${pagination.page}`}
+        image_default={FacebookImageDefault}
+        image_large={FacebookImageLarge}
+        image_small={FacebookImageSmall}
+        image_twitter={TwitterImage}
+      >
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </SEO>
       <PaginationPage
         pagination={pagination}
         categoryName={category.name}

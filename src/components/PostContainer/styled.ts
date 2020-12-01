@@ -55,8 +55,8 @@ export const Container = styled.article`
   }
 
   pre {
-    margin: ${({ theme }) => theme.spacings.medium} 0;
-    overflow-y: auto;
+    margin: ${({ theme }) => theme.spacings.large} 0;
+    overflow-x: auto;
   }
 
   code {
@@ -66,7 +66,7 @@ export const Container = styled.article`
   blockquote {
     border-left: 7px solid ${({ theme }) => theme.colors.primary};
     padding: 5px 0 5px 40px;
-    margin: ${({ theme }) => theme.spacings.medium} 0;
+    margin: ${({ theme }) => theme.spacings.large} 0;
 
     p {
       font: italic 400 ${({ theme }) => theme.font.sizes.medium} Poppins,
@@ -79,6 +79,33 @@ export const Container = styled.article`
   }
 
   @media (max-width: 960px) {
-    padding: ${({ theme }) => theme.spacings.medium};
+    padding: 0 ${({ theme }) => theme.spacings.medium};
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    h4 {
+      font-size: 2rem;
+    }
+
+    li,
+    p {
+      font-size: 1.8rem;
+    }
+
+    blockquote {
+      p {
+        font-size: 1.8rem;
+      }
+    }
+
+    pre {
+      font-size: 1.8rem;
+    }
   }
 `;

@@ -17,6 +17,7 @@ export const Container = styled.section`
 
     p {
       line-height: 30px;
+      padding: 3rem 0;
     }
   }
 `;

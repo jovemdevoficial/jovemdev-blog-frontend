@@ -13,14 +13,19 @@ export type SeoProps = {
   title: string;
   description: string;
   keywords: string;
-  url?: string;
-  type: 'blog' | 'website' | 'article';
+  url: string;
+  type: 'blog' | 'website' | 'article' | 'profile';
   site_name: string;
   authors: PropertyAuthors[];
   category?: string;
   tags?: PropertyTags[];
   published_time?: string;
-  updated_time?: string;
+  modified_time?: string;
+  image_large: string;
+  image_small: string;
+  image_twitter: string;
+  image_default: string;
+  children?: React.ReactNode;
 };
 
 export function SEO({
@@ -34,6 +39,12 @@ export function SEO({
   tags = [{ name: '' }],
   category = '',
   published_time = '',
+  modified_time = '',
+  image_large,
+  image_small,
+  image_default,
+  image_twitter,
+  children,
 }: SeoProps) {
   return (
     <Head>
@@ -45,17 +56,32 @@ export function SEO({
       <meta name="keywords" content={keywords} />
 
       <meta property="og:locale" content="pt_BR" />
-      <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {/* Maior que 200px x 200px
-      <meta property="og:image" content="" />
+
+      <meta property="og:image" content={image_default} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:alt" content={description} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="628" />
+
+      <meta property="og:image" content={image_large} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:alt" content={description} />
+      <meta property="og:image:width" content="1000" />
+      <meta property="og:image:height" content="1000" />
+
+      <meta property="og:image" content={image_small} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:alt" content={description} />
       <meta property="og:image:width" content="500" />
       <meta property="og:image:height" content="500" />
-      */}
+
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content={site_name} />
       <meta property="fb:app_id" content="1841679489341843" />
+
+      <meta property="og:type" content={type} />
 
       {type === 'article' && (
         <>
@@ -66,17 +92,19 @@ export function SEO({
           <meta property="article:section" content={category} />
           <meta property="article:tag" content={transformArrayToString(tags)} />
           <meta property="article:published_time" content={published_time} />
+          <meta property="article:modified_time" content={modified_time} />
         </>
       )}
 
       <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@jovemdevoficial" />
+      <meta name="twitter:creator" content="@almerindopaixao" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      {/* menor que 1mb, o tamanho deve ser thumbinail
-        <meta name="twitter:image"content="" />
-        <meta name="twitter:creator" content="" />
-      */}
       <meta name="twitter:url" content={url} />
+      <meta name="twitter:image" content={image_twitter} />
+      <meta name="twitter:image:alt" content={description} />
+      {children}
     </Head>
   );
 }

@@ -49,6 +49,7 @@ export const Hamburger = styled.span`
   }
 
   &.hamburger-close {
+    position: fixed;
     transform: rotate(45deg);
   }
 

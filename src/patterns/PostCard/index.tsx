@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { v4 as uuidv4 } from 'uuid';
 
-import { FaShare, FaHeart } from 'react-icons/fa';
+import { FaBlog } from 'react-icons/fa';
 
 import { PostData } from '../../domain/posts/post';
 import {
@@ -10,7 +10,6 @@ import {
   PostCardDetails,
   ContainerPostDetails,
   PublishDetails,
-  IconsDetails,
 } from './styled';
 
 import { Typography } from '../../infra/components/Typography';
@@ -33,7 +32,6 @@ export function PostCard({ post }: PostCardProps) {
             height={190}
             layout="responsive"
             loading="eager"
-            priority={true}
           />
         </a>
       </Link>
@@ -65,22 +63,7 @@ export function PostCard({ post }: PostCardProps) {
               })}
             </span>
           </PublishDetails>
-
-          <IconsDetails>
-            <div>
-              <span>10</span>
-              <Link href="/">
-                <a aria-label="FaHeart">
-                  <FaHeart />
-                </a>
-              </Link>
-            </div>
-            <Link href={`/posts/${post.slug}`}>
-              <a aria-label="FaShare">
-                <FaShare />
-              </a>
-            </Link>
-          </IconsDetails>
+          <FaBlog size={20} color="#181414" />
         </ContainerPostDetails>
       </PostCardDetails>
     </Card>

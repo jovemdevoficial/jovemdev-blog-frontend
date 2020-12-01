@@ -5,6 +5,8 @@ import { Container, AuthorContact, AuthorDescription } from './styled';
 import { PostAuthor } from '../../domain/posts/post';
 import { SocialNetworks } from '../SocialNetworks';
 
+import { insertZeroLeft } from '../../utils/insert-zero-left';
+
 export type AuthorCardProps = {
   author: PostAuthor;
 };
@@ -21,11 +23,16 @@ export function AuthorCard({ author }: AuthorCardProps) {
       />
       <div>
         <AuthorDescription>
-          <Link href="/autor/[slug]" as={`/autor/${author.slug}`}>
-            <a>
-              <h3>{author.name}</h3>
-            </a>
-          </Link>
+          <div>
+            <Link href="/autor/[slug]" as={`/autor/${author.slug}`}>
+              <a>
+                <h3>{author.name}</h3>
+              </a>
+            </Link>
+            <span>{`${insertZeroLeft(
+              author.amountOfPosts,
+            )} posts publicados`}</span>
+          </div>
 
           <p>{author.biography}</p>
         </AuthorDescription>

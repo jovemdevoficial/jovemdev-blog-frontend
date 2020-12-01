@@ -26,7 +26,7 @@ export const ContainerNav = styled.nav`
 
     span {
       font: 600 1.8rem Poppins, sans-serif;
-      margin-left: 16px;
+      margin-left: 20px;
     }
   }
 

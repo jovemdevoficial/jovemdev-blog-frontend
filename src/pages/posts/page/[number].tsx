@@ -6,11 +6,18 @@ import { postsPerPage } from '../../../config/constants';
 import { getAllPosts } from '../../../data/posts/get-all-posts';
 
 import { PaginationPage } from '../../../container/PaginationPage';
+
 import { createArrayWithNumberOfPosts } from '../../../utils/create-array-with-number-of-posts';
+import { jsonLdPaginationPage } from '../../../lib/json-ld-pagination-page';
 
 import { SEO } from '../../../infra/components/SEO';
 
 import { SITE_NAME, SITE_URL, SITE_AUTHORS } from '../../../config/api-config';
+
+import FacebookImageDefault from '../../../assets/images/logo-image-facebook-1200x628.png';
+import FacebookImageLarge from '../../../assets/images/logo-image-facebook-1000x1000.png';
+import FacebookImageSmall from '../../../assets/images/logo-image-facebook-500x500.png';
+import TwitterImage from '../../../assets/images/logo-image-twitter-150x150.png';
 
 export type PagePostsProps = {
   posts: PostData[];
@@ -18,6 +25,8 @@ export type PagePostsProps = {
 };
 
 export default function PagePosts({ pagination, posts }: PagePostsProps) {
+  const jsonLd = jsonLdPaginationPage({ posts });
+
   return (
     <>
       <SEO
@@ -28,7 +37,16 @@ export default function PagePosts({ pagination, posts }: PagePostsProps) {
         site_name={SITE_NAME}
         url={`${SITE_URL}/posts/page/${pagination.page}`}
         type="blog"
-      />
+        image_default={FacebookImageDefault}
+        image_large={FacebookImageLarge}
+        image_small={FacebookImageSmall}
+        image_twitter={TwitterImage}
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        ></script>
+      </SEO>
       <PaginationPage posts={posts} pagination={pagination} />
     </>
   );

@@ -2,23 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://localhost:3000/404/</loc>
+    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>http://localhost:3000/categorias/</loc>
+    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>http://localhost:3000/</loc>
+    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>http://localhost:3000/pesquisar/</loc>
+    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>http://localhost:3000/sobre/</loc>
+    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/posts/teste2/</loc>
-    <lastmod>2020-11-13T05:36:53.693Z</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>http://localhost:3000/tags/</loc>
+    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
@@ -37,6 +57,13 @@
   </url>
 
   <url>
+    <loc>http://localhost:3000/posts/teste2/</loc>
+    <lastmod>2020-11-13T05:36:53.693Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>http://localhost:3000/posts/teste-5/</loc>
     <lastmod>2020-11-15T01:16:34.977Z</lastmod>
     <changefreq>daily</changefreq>
@@ -48,6 +75,24 @@
       >http://localhost:3000/posts/entre-criar-um-blog-pessoal-com-gatsby-e-usar-o-medium-por-que-nao-ter-os-dois/</loc
     >
     <lastmod>2020-11-23T02:48:14.039Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc
+      >http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss/</loc
+    >
+    <lastmod>2020-11-27T23:38:31.594Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc
+      >http://localhost:3000/posts/conheca-o-react-icons-uma-biblioteca-de-icones-famosos/</loc
+    >
+    <lastmod>2020-11-26T22:38:50.095Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -74,6 +119,24 @@
   </url>
 
   <url>
+    <loc
+      >http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-2/</loc
+    >
+    <lastmod>2020-11-28T00:02:56.716Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc
+      >http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-1/</loc
+    >
+    <lastmod>2020-11-27T23:41:59.863Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>http://localhost:3000/posts/page/1/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -87,6 +150,12 @@
 
   <url>
     <loc>http://localhost:3000/posts/page/3/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>http://localhost:3000/posts/page/4/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -108,6 +177,20 @@
   <url>
     <loc>http://localhost:3000/categoria/python/page/1/</loc>
     <lastmod>2020-11-23T19:23:20.709Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>http://localhost:3000/categoria/python/page/2/</loc>
+    <lastmod>2020-11-23T19:23:20.709Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>http://localhost:3000/categoria/php/page/1/</loc>
+    <lastmod>2020-11-14T00:50:14.088Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -141,6 +224,13 @@
   </url>
 
   <url>
+    <loc>http://localhost:3000/tag/banco-de-dados/page/4/</loc>
+    <lastmod>2020-11-23T19:24:22.448Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>http://localhost:3000/tag/frameworks/page/1/</loc>
     <lastmod>2020-11-23T19:24:33.299Z</lastmod>
     <changefreq>daily</changefreq>
@@ -162,6 +252,13 @@
   </url>
 
   <url>
+    <loc>http://localhost:3000/tag/frameworks/page/4/</loc>
+    <lastmod>2020-11-23T19:24:33.299Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>http://localhost:3000/tag/outra-tag/page/1/</loc>
     <lastmod>2020-11-23T19:24:43.598Z</lastmod>
     <changefreq>daily</changefreq>
@@ -170,6 +267,13 @@
 
   <url>
     <loc>http://localhost:3000/tag/outra-tag/page/2/</loc>
+    <lastmod>2020-11-23T19:24:43.598Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>http://localhost:3000/tag/outra-tag/page/3/</loc>
     <lastmod>2020-11-23T19:24:43.598Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>

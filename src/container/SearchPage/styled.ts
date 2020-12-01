@@ -34,8 +34,9 @@ export const AboveTheFoldContent = styled.div`
 
   h1 {
     color: ${({ theme }) => theme.colors.white};
-    font: 600 3rem Poppins, sans-serif;
+    font: 600 3.1rem Merriweather, sans-serif;
     line-height: 55px;
+    margin-bottom: 5rem;
   }
 
   @media (max-width: 960px) {
@@ -44,16 +45,6 @@ export const AboveTheFoldContent = styled.div`
       text-align: justify;
     }
   }
-
-  /*
-  p {
-    color: ${({ theme }) => theme.colors.white};
-    font: 400 2rem Poppins, sans-serif;
-    line-height: 45px;
-
-    margin-top: 2rem;
-  }
-  */
 `;
 
 export const SearchWrapper = styled.div`

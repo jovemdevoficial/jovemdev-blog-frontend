@@ -31,10 +31,18 @@ export const getStaticProps: GetStaticProps = async () => {
               large: {
                 url: post.cover.formats.large.url,
               },
+              medium: {
+                url: post.cover.formats.medium.url,
+              },
+              thumbnail: {
+                url: post.cover.formats.thumbnail.url,
+              },
             },
           },
           slug: post.slug,
           published_at: post.published_at,
+          updated_at: post.updated_at,
+          created_at: post.created_at,
           authors: post.authors.map((author) => {
             return {
               name: author.name,
@@ -46,6 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
                   },
                 },
               },
+              social_networks: author.social_networks,
             };
           }),
         };

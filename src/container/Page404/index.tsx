@@ -12,8 +12,12 @@ import { Footer } from '../../patterns/Footer';
 import { Container } from './styled';
 
 import pageNotFound from '../../assets/svgs/page_not_found.svg';
+import FacebookImageDefault from '../../assets/images/logo-image-facebook-1200x628.png';
+import FacebookImageLarge from '../../assets/images/logo-image-facebook-1000x1000.png';
+import FacebookImageSmall from '../../assets/images/logo-image-facebook-500x500.png';
+import TwitterImage from '../../assets/images/logo-image-twitter-150x150.png';
 
-import { SITE_NAME, SITE_AUTHORS } from '../../config/api-config';
+import { SITE_NAME, SITE_AUTHORS, SITE_URL } from '../../config/api-config';
 import { SideNav } from '../../components/SideNav';
 import LightBox from '../../components/LightBox';
 
@@ -27,6 +31,11 @@ export function Page404() {
         keywords="404, not found"
         type="blog"
         site_name={SITE_NAME}
+        url={`${SITE_URL}/404`}
+        image_default={FacebookImageDefault}
+        image_large={FacebookImageLarge}
+        image_small={FacebookImageSmall}
+        image_twitter={TwitterImage}
       />
       <Header />
       <SideNav />
