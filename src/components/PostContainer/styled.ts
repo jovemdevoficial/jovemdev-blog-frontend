@@ -40,12 +40,12 @@ export const Container = styled.article`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.secondary};
+    text-decoration: underline;
   }
 
   a:hover {
-    color: ${({ theme }) => theme.colors.blueHover};
-    text-decoration: underline;
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   ul,
@@ -56,6 +56,7 @@ export const Container = styled.article`
 
   pre {
     margin: ${({ theme }) => theme.spacings.large} 0;
+    font-size: ${({ theme }) => theme.font.sizes.large};
     overflow-x: auto;
   }
 

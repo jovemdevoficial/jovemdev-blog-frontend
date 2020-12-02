@@ -49,7 +49,7 @@ export const AuthorDescription = styled.div`
   span {
     margin-top: 1rem;
     font: 300 1.6rem Poppins, sans-serif;
-    color: ${({ theme }) => theme.colors.lightGray};
+    color: ${({ theme }) => theme.colors.darkGray};
   }
 
   p {

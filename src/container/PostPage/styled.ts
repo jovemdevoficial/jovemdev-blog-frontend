@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const WritterBy = styled.h4`
+export const WritterBy = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.lightGray};
     font: 300 ${theme.font.sizes.superLarge} Roboto, sans-serif;

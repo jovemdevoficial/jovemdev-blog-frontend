@@ -36,10 +36,12 @@ export const AboutDescription = styled.section`
 
     h1 {
       text-align: center;
+      font-size: 4rem;
     }
 
     h2 {
       text-align: center;
+      font-size: 4rem;
     }
   }
 `;
@@ -50,7 +52,7 @@ export const InstagramDescription = styled.section`
   & > div {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   h2 {
@@ -67,7 +69,7 @@ export const InstagramDescription = styled.section`
 
   p {
     text-align: justify;
-    padding-left: 4rem;
+    width: 65rem;
   }
 
   @media (max-width: 960px) {
@@ -80,6 +82,14 @@ export const InstagramDescription = styled.section`
 
     h2 {
       text-align: center;
+      font-size: 4rem;
+      line-height: 50px;
+    }
+
+    p {
+      font-size: 2rem;
+      width: 100%;
+      margin-top: 3.5rem;
     }
   }
 `;

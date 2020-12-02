@@ -8,6 +8,10 @@ export const Container = styled.div`
   left: 0;
 
   z-index: 4;
+
+  &.hamburger-close {
+    position: fixed;
+  }
 `;
 
 export const LabelHamburger = styled.span`
@@ -49,7 +53,6 @@ export const Hamburger = styled.span`
   }
 
   &.hamburger-close {
-    position: fixed;
     transform: rotate(45deg);
   }
 

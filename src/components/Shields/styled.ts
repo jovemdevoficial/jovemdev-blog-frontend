@@ -7,6 +7,7 @@ export type ContainerProps = {
 export const Container = styled.div<ContainerProps>`
   min-width: 125px;
   font: 600 2rem Roboto, sans-serif;
+
   padding: 1rem 2rem;
 
   background-color: ${({ color }) => color};

@@ -82,7 +82,7 @@ export const PostCardDetails = styled.section`
 `;
 
 export const ContainerPostDetails = styled.div`
-  margin-bottom: ${({ theme }) => theme.spacings.large};
+  margin-bottom: ${({ theme }) => theme.spacings.medium};
   position: absolute;
   width: 100%;
   min-height: 4rem;
@@ -98,54 +98,23 @@ export const PublishDetails = styled.div`
   flex-direction: column;
 
   span {
-    display: block;
+    display: flex;
+    flex-direction: column;
     color: ${({ theme }) => theme.colors.secondary};
     font: 300 ${({ theme }) => theme.font.sizes.small} Roboto, sans-serif;
+  }
+
+  span + span {
+    margin-top: 1rem;
   }
 
   a {
     color: ${({ theme }) => theme.colors.secondary};
     font: 600 ${({ theme }) => theme.font.sizes.small} Roboto, sans-serif;
+    margin-top: 0.4rem;
   }
 
   a:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
 `;
-
-/*
-export const IconsDetails = styled.div`
-  width: 70px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  div {
-    display: flex;
-  }
-
-  span {
-    font-weight: 300;
-    font-size: 14px;
-    margin-right: 4px;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-
-    transition: color 0.5s ease-in-out;
-    cursor: pointer;
-
-    ${({ theme }) => css`
-      color: ${theme.colors.secondary};
-      font-size: ${theme.font.sizes.medium};
-
-      &:hover {
-        color: ${theme.colors.primary};
-      }
-    `}
-  }
-`;
-*/

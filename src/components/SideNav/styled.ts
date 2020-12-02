@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const ContainerNav = styled.nav`
-  height: 100%;
+  height: 100vh;
   width: 250px;
   padding-top: 90px;
+  padding-bottom: 40px;
   background: ${({ theme }) => theme.colors.secondary};
   position: fixed;
   top: 0;
@@ -13,6 +14,7 @@ export const ContainerNav = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
 
   transform: translateX(-250px);
 
@@ -30,15 +32,15 @@ export const ContainerNav = styled.nav`
     }
   }
 
-  a + a {
-    padding-top: 40px;
-  }
-
   a:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
 
   &.nav-responsive {
     transform: translateX(0px);
+  }
+
+  @media (max-width: 960px) {
+    padding-bottom: 100px;
   }
 `;

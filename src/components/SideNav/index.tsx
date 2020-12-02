@@ -6,6 +6,7 @@ import {
   FaFolderOpen,
   FaBook,
   FaStickyNote,
+  FaRss,
 } from 'react-icons/fa';
 
 import { ContainerNav } from './styled';
@@ -19,13 +20,6 @@ export function SideNav() {
           <span>Home</span>
         </a>
       </Link>
-
-      {/*<Link href="/404">
-        <a aria-label="Newsletter">
-          <FaEnvelope size={36} />
-          <span>Newsletter</span>
-        </a>
-       </Link>*/}
 
       <Link href="/pesquisar">
         <a aria-label="Pesquisar">
@@ -59,6 +53,13 @@ export function SideNav() {
         <a aria-label="Sobre">
           <FaBook size={34} />
           <span>Sobre</span>
+        </a>
+      </Link>
+
+      <Link href="/rss.xml">
+        <a aria-label="Feed Rss">
+          <FaRss size={34} />
+          <span>Feed Rss</span>
         </a>
       </Link>
     </ContainerNav>

@@ -17,8 +17,8 @@ export function AuthorCard({ author }: AuthorCardProps) {
       <Image
         src={author.avatar.formats.thumbnail.url}
         alt={author.name}
-        width={150}
-        height={150}
+        width={160}
+        height={160}
         layout="fixed"
       />
       <div>

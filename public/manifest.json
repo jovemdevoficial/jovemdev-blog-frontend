@@ -2,6 +2,7 @@
   "name": "Jovem Dev",
   "short_name": "Jovem Dev",
   "author": "Almerindo da Paixão Junior",
+  "start_url": "http://localhost:3000",
   "description": "",
   "icons": [
     {
@@ -42,6 +43,5 @@
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "start_url": "http://localhost:3000",
   "display": "standalone"
 }

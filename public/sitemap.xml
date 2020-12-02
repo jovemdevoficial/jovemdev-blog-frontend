@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://localhost:3000/404/</loc>
-    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
+    <lastmod>2020-12-02T00:36:48.756Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>http://localhost:3000/categorias/</loc>
-    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
+    <lastmod>2020-12-02T00:36:48.756Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>http://localhost:3000/</loc>
-    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
+    <lastmod>2020-12-02T00:36:48.756Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>http://localhost:3000/pesquisar/</loc>
-    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
+    <lastmod>2020-12-02T00:36:48.756Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>http://localhost:3000/sobre/</loc>
-    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
+    <lastmod>2020-12-02T00:36:48.756Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>http://localhost:3000/tags/</loc>
-    <lastmod>2020-11-29T21:53:40.868Z</lastmod>
+    <lastmod>2020-12-02T00:36:48.756Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

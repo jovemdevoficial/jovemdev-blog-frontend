@@ -50,18 +50,16 @@ export function PostCard({ post }: PostCardProps) {
 
         <ContainerPostDetails>
           <PublishDetails>
-            <span>
-              Publicado por
-              {post.authors.map((author) => {
-                return (
-                  <span key={uuidv4()}>
-                    <Link href={`/autor/${author.slug}`}>
-                      <a>{author.name}</a>
-                    </Link>
-                  </span>
-                );
-              })}
-            </span>
+            {post.authors.map((author) => {
+              return (
+                <span key={uuidv4()}>
+                  Publicado por
+                  <Link href={`/autor/${author.name}`}>
+                    <a>{author.name}</a>
+                  </Link>
+                </span>
+              );
+            })}
           </PublishDetails>
           <FaBlog size={20} color="#181414" />
         </ContainerPostDetails>

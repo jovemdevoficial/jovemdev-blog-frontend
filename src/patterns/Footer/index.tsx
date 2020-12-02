@@ -18,16 +18,32 @@ export function Footer() {
         >
           <img src={githubIcon} alt="Ícone do Github" />
         </a>
-        <a href="#" rel="noopener noreferrer" target="_blank">
+        <a
+          href="https://www.instagram.com/jovemdevoficial/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img src={instagramIcon} alt="Ícone do Instagram" />
         </a>
-        <a href="#" rel="noopener noreferrer" target="_blank">
+        <a
+          href="https://www.facebook.com/jovemdevoficial"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img src={facebookIcon} alt="Ícone do Facebook" />
         </a>
-        <a href="#" rel="noopener noreferrer" target="_blank">
+        <a
+          href="https://www.linkedin.com/company/jovemdev/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img src={linkedinIcon} alt="Ícone do Linkedin" />
         </a>
-        <a href="#" rel="noopener noreferrer" target="_blank">
+        <a
+          href="https://twitter.com/jovemdevoficial"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img src={twitterIcon} alt="Ícone do Twitter" />
         </a>
       </IconsContainer>

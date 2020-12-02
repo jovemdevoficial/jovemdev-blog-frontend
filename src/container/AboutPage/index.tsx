@@ -16,7 +16,6 @@ import LightBox from '../../components/LightBox';
 import { AboutDescription, InstagramDescription } from './styled';
 
 import aboutImage from '../../assets/svgs/about.svg';
-import InstagramImage from '../../assets/images/imagem-de-perfil-do-instagram-do-jovemdev.png';
 import FacebookImageDefault from '../../assets/images/logo-image-facebook-1200x628.png';
 import FacebookImageLarge from '../../assets/images/logo-image-facebook-1000x1000.png';
 import FacebookImageSmall from '../../assets/images/logo-image-facebook-500x500.png';
@@ -79,10 +78,10 @@ export function AboutPage() {
           <h2>Insatagram do Jovem Dev</h2>
           <div>
             <Image
-              src={InstagramImage}
+              src={FacebookImageSmall}
               alt="Imagem de perfil do instagram do Jovem Dev"
-              height={500}
-              width={500}
+              height={200}
+              width={200}
             />
             <Typography component="subtitle1">
               Tetigit ut dixerat, lapidoso si lumina, at cuius: voce. Latiae tui

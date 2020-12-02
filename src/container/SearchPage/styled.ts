@@ -58,7 +58,7 @@ export const SearchWrapper = styled.div`
 
   .ais-SearchBox-input {
     font-size: 2rem;
-    color: ${({ theme }) => theme.colors.lightGray};
+    color: ${({ theme }) => theme.colors.darkGray};
     width: 100%;
 
     padding: 0 8px;

@@ -9,12 +9,17 @@ export function HamburgerButton() {
     );
 
     const hamburgerDiv = window.document.querySelector(
+      '.styled__Container-gbonng-0',
+    );
+
+    const hamburgerSpan = window.document.querySelector(
       '.styled__Hamburger-gbonng-2',
     );
 
     const lightBox = window.document.querySelector('.LightBox-sc-1nx0ljj-0');
 
     hamburgerDiv.classList.toggle('hamburger-close');
+    hamburgerSpan.classList.toggle('hamburger-close');
     sideNav.classList.toggle('nav-responsive');
     lightBox.classList.toggle('bg');
   }

@@ -1,18 +1,17 @@
-// import Link from 'next/link';
 import Image from 'next/image';
+
 import {
   FaLinkedinIn,
   FaTwitter,
   FaFacebookF,
-  FaPinterestP,
-  FaRss,
+  FaTelegramPlane,
+  FaWhatsapp,
 } from 'react-icons/fa';
 
 import { PostData } from '../../domain/posts/post';
 
 import { Typography } from '../../infra/components/Typography';
 
-//import { insertZeroLeft } from '../../utils/insert-zero-left';
 import { formateDate } from '../../utils/formate-data';
 import { SITE_URL } from '../../config/api-config';
 
@@ -43,47 +42,51 @@ export function PostDetails({ post }: PostDetailsProps) {
 
         <SharedDetails>
           <Shields
-            label="Linkedin"
-            color="#0e76a8"
-            url={`https://www.linkedin.com/shareArticle?mini=true&url=${
-              SITE_URL + '/posts/' + post.slug
-            }pt-br/webtools/sharelink/&title=&summary=&source="`}
+            label="WhatsApp"
+            color="#27801b"
+            url={`https://api.whatsapp.com/send?text=${SITE_URL}/posts/${post.slug}`}
           >
-            <FaLinkedinIn />
-          </Shields>
-
-          <Shields
-            label="Twitter"
-            color="#00acee"
-            url={`https://twitter.com/intent/tweet?url=${
-              SITE_URL + '/posts/' + post.slug
-            }pt-br/webtools/sharelink/&text=`}
-          >
-            <FaTwitter />
+            <FaWhatsapp />
           </Shields>
 
           <Shields
             label="Facebook"
             color="#3b5998"
-            url={`https://twitter.com/intent/tweet?url=${
+            url={`https://www.facebook.com/sharer/sharer.php?u=${
               SITE_URL + '/posts/' + post.slug
-            }pt-br/webtools/sharelink/&text=`}
+            }`}
           >
             <FaFacebookF />
           </Shields>
 
           <Shields
-            label="Pinterest"
-            color="#c8232c"
-            url={`https://pinterest.com/pin/create/button/?url=${
+            label="Twitter"
+            color="#007AC3"
+            url={`https://twitter.com/intent/tweet?url=${
               SITE_URL + '/posts/' + post.slug
-            }&media=${post.cover.url}&description=`}
+            }&text=`}
           >
-            <FaPinterestP />
+            <FaTwitter />
           </Shields>
 
-          <Shields label="Feed" color="#ee802f" url="/rss.xml">
-            <FaRss />
+          <Shields
+            label="Linkedin"
+            color="#0e76a8"
+            url={`https://www.linkedin.com/shareArticle?mini=true&url=${
+              SITE_URL + '/posts/' + post.slug
+            }&title=&summary=&source="`}
+          >
+            <FaLinkedinIn />
+          </Shields>
+
+          <Shields
+            label="Telegram"
+            color="#0b73a7"
+            url={`https://telegram.me/share/url?url=${
+              SITE_URL + '/posts/' + post.slug
+            }`}
+          >
+            <FaTelegramPlane />
           </Shields>
         </SharedDetails>
       </SharedContainer>
