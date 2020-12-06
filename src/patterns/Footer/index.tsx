@@ -13,35 +13,35 @@ export function Footer() {
       <IconsContainer>
         <a
           href="https://github.com/jovemdevoficial"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer external"
           target="_blank"
         >
           <img src={githubIcon} alt="Ícone do Github" />
         </a>
         <a
           href="https://www.instagram.com/jovemdevoficial/"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer external"
           target="_blank"
         >
           <img src={instagramIcon} alt="Ícone do Instagram" />
         </a>
         <a
           href="https://www.facebook.com/jovemdevoficial"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer external"
           target="_blank"
         >
           <img src={facebookIcon} alt="Ícone do Facebook" />
         </a>
         <a
           href="https://www.linkedin.com/company/jovemdev/"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer external"
           target="_blank"
         >
           <img src={linkedinIcon} alt="Ícone do Linkedin" />
         </a>
         <a
           href="https://twitter.com/jovemdevoficial"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer external"
           target="_blank"
         >
           <img src={twitterIcon} alt="Ícone do Twitter" />

@@ -1,10 +1,17 @@
-const POST_URL = 'http://localhost:1337/posts';
-const CATEGORIES_URL = 'http://localhost:1337/categories';
-const TAGS_URL = 'http://localhost:1337/tags';
-const SITE_URL = 'http://localhost:3000';
-const AUTHORS_URL = 'http://localhost:1337/authors';
-const SITE_NAME = 'Jovem DEV';
-const postsPerPage = 3;
+/* eslint-disable @typescript-eslint/no-var-requires */
+const dotenv = require('dotenv');
+// const path = require('path');
+
+dotenv.config();
+
+const API_URL = process.env.API_URL;
+const POST_URL = `${API_URL}/posts`;
+const CATEGORIES_URL = `${API_URL}/categories`;
+const TAGS_URL = `${API_URL}/tags`;
+const SITE_URL = 'https://jovemdev.com';
+const AUTHORS_URL = `${API_URL}/authors`;
+const SITE_NAME = 'Jovem Dev';
+const postsPerPage = 6;
 
 module.exports = {
   POST_URL,

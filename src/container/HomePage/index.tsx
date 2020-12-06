@@ -20,7 +20,7 @@ import { Header } from '../../patterns/Header';
 import { Footer } from '../../patterns/Footer';
 import { PostCard } from '../../patterns/PostCard';
 
-import { SITE_NAME, SITE_URL, SITE_AUTHORS } from '../../config/api-config';
+import { SITE_NAME, SITE_URL, SITE_AUTHORS } from '../../config/site-config';
 import { formateDate } from '../../utils/formate-data';
 import { jsonLdHomePage } from '../../lib/json-ld-home-page';
 
@@ -44,12 +44,12 @@ export function HomePage({ posts }: HomePageProps) {
   return (
     <>
       <SEO
-        title={`Home | ${SITE_NAME} Blog`}
-        description="Essa é uma descrição teste"
+        title={`${SITE_NAME} | O Blog Feito Para Programadores`}
+        description="Um blog repleto de conteúdo sobre tecnologia, dicas de programação, marketing digital, desenvolvimento de software e tudo mais que você precisa conhecer"
         keywords="Blog,Tecnologia,Programação"
         url={SITE_URL}
         type="blog"
-        site_name="Jovem Dev"
+        site_name={SITE_NAME}
         authors={SITE_AUTHORS}
         image_default={FacebookImageDefault}
         image_large={FacebookImageLarge}

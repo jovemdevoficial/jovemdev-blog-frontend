@@ -37,6 +37,12 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
             small: {
               url: author.avatar.formats.small.url,
             },
+            large: {
+              url: author.avatar.formats.large.url,
+            },
+            medium: {
+              url: author.avatar.formats.medium.url,
+            },
           },
         },
         posts: author.posts.map((post) => {

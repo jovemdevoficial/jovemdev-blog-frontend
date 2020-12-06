@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { SITE_NAME, SITE_URL, SITE_AUTHORS } from '../../config/api-config';
+import { SITE_NAME, SITE_URL, SITE_AUTHORS } from '../../config/site-config';
 import { jsonLdAboutPage } from '../../lib/json-ld-about-page';
 
 import { SEO } from '../../infra/components/SEO';
@@ -27,7 +27,7 @@ export function AboutPage() {
   return (
     <>
       <SEO
-        title={`Sobre | ${SITE_NAME} Blog`}
+        title={`Sobre | ${SITE_NAME}`}
         description="Informações do Jovem Dev"
         keywords="Autor, Biografia, Posts"
         site_name={SITE_NAME}

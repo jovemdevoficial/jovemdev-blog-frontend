@@ -12,14 +12,9 @@ import { SideNav } from '../../components/SideNav';
 import { Comments } from '../../components/Comments';
 import LightBox from '../../components/LightBox';
 
-import { SITE_NAME, SITE_URL } from '../../config/api-config';
+import { SITE_NAME, SITE_URL } from '../../config/site-config';
 import { jsonLdPostPage } from '../../lib/json-ld-post-page';
 import { PostData } from '../../domain/posts/post';
-
-import FacebookImageDefault from '../../assets/images/logo-image-facebook-1200x628.png';
-import FacebookImageLarge from '../../assets/images/logo-image-facebook-1000x1000.png';
-import FacebookImageSmall from '../../assets/images/logo-image-facebook-500x500.png';
-import TwitterImage from '../../assets/images/logo-image-twitter-150x150.png';
 
 import { WritterBy } from './styled';
 
@@ -63,10 +58,10 @@ export function PostPage({ post }: HomePageProps) {
         tags={post.tags}
         published_time={post.published_at}
         modified_time={post.updated_at}
-        image_default={FacebookImageDefault}
-        image_large={FacebookImageLarge}
-        image_small={FacebookImageSmall}
-        image_twitter={TwitterImage}
+        image_default={post.cover.url}
+        image_large={post.cover.formats.large.url}
+        image_small={post.cover.formats.small.url}
+        image_twitter={post.cover.formats.thumbnail.url}
       >
         <script
           type="application/ld+json"

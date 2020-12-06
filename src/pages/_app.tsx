@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
-import 'highlight.js/styles/darcula.css';
+import 'highlight.js/styles/an-old-hope.css';
 
 import { GlobalStyles } from '../styles/global';
 import { theme } from '../styles/theme';

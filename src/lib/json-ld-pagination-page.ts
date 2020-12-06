@@ -1,4 +1,4 @@
-import { SITE_URL } from '../config/api-config';
+import { SITE_URL } from '../config/site-config';
 
 export type JsonLdPaginationPageProps = {
   posts: { slug: string }[];

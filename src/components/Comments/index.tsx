@@ -1,5 +1,5 @@
 import { DiscussionEmbed } from 'disqus-react';
-// import { SITE_URL } from '../../config/api-config';
+import { DISQUS_SHORTNAME, DISQUS_URL } from '../../config/disqus-config';
 
 import { Container } from './styled';
 
@@ -12,9 +12,9 @@ export function Comments({ slug, title }: CommentsProps) {
   return (
     <Container>
       <DiscussionEmbed
-        shortname="jovemdev"
+        shortname={DISQUS_SHORTNAME}
         config={{
-          url: `http://vcap.me/post/${slug}`,
+          url: `${DISQUS_URL}/post/${slug}`,
           identifier: slug,
           title: title,
           language: 'pt_BR',

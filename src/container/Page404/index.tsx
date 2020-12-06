@@ -17,7 +17,7 @@ import FacebookImageLarge from '../../assets/images/logo-image-facebook-1000x100
 import FacebookImageSmall from '../../assets/images/logo-image-facebook-500x500.png';
 import TwitterImage from '../../assets/images/logo-image-twitter-150x150.png';
 
-import { SITE_NAME, SITE_AUTHORS, SITE_URL } from '../../config/api-config';
+import { SITE_NAME, SITE_AUTHORS, SITE_URL } from '../../config/site-config';
 import { SideNav } from '../../components/SideNav';
 import LightBox from '../../components/LightBox';
 

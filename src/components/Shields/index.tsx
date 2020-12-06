@@ -9,7 +9,7 @@ export type ShieldsPros = {
 
 export function Shields({ children, color, label, url }: ShieldsPros) {
   return (
-    <a href={url} rel="noopener noreferrer" target="_blank">
+    <a href={url} target="_blank" rel="noopener noreferrer nofollow">
       <Container color={color}>
         {children}
         <span>{label}</span>

@@ -39,7 +39,7 @@ export function Pagination({
       {hasPreviousPage && (
         <DynamicLink>
           <Link href={previousLink}>
-            <a>
+            <a rel="prev">
               <FaArrowLeft />
               <span>Página Anterior</span>
             </a>
@@ -54,7 +54,7 @@ export function Pagination({
       {hasNextPage && (
         <DynamicLink>
           <Link href={nextLink}>
-            <a>
+            <a rel="next">
               <span>Próxima Página</span>
               <FaArrowRight />
             </a>

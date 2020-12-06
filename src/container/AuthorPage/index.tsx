@@ -5,7 +5,7 @@ import { PostCard } from '../../patterns/PostCard';
 import { SEO } from '../../infra/components/SEO';
 
 import { Author } from '../../domain/authors/author';
-import { SITE_NAME, SITE_URL } from '../../config/api-config';
+import { SITE_NAME, SITE_URL } from '../../config/site-config';
 
 import { jsonLdAuthorPage } from '../../lib/json-ld-author-page';
 
@@ -31,7 +31,12 @@ export function AuthorPage({ author }: AuthorPageProps) {
     name: author.name,
     email: author.email,
     slug: author.slug,
-    image: author.avatar.formats.small.url,
+    image: [
+      author.avatar.formats.thumbnail.url,
+      author.avatar.formats.small.url,
+      author.avatar.formats.medium.url,
+      author.avatar.formats.large.url,
+    ],
     sameAs: [
       author.social_networks.facebook,
       author.social_networks.github,
@@ -46,7 +51,7 @@ export function AuthorPage({ author }: AuthorPageProps) {
   return (
     <>
       <SEO
-        title={`${author.name} | ${SITE_NAME} Blog`}
+        title={`${author.name} | ${SITE_NAME}`}
         description={author.biography}
         keywords="Autor, Biografia, Posts"
         site_name={SITE_NAME}

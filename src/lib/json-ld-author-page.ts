@@ -1,10 +1,10 @@
-import { SITE_URL } from '../config/api-config';
+import { SITE_URL } from '../config/site-config';
 
 export type JsonLdAuthorPageProps = {
   name: string;
   email: string;
   slug: string;
-  image: string;
+  image: string[];
   sameAs: string[];
 };
 

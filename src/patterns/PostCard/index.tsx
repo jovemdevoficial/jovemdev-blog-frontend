@@ -54,7 +54,7 @@ export function PostCard({ post }: PostCardProps) {
               return (
                 <span key={uuidv4()}>
                   Publicado por
-                  <Link href={`/autor/${author.name}`}>
+                  <Link href={`/autor/${author.slug}`}>
                     <a>{author.name}</a>
                   </Link>
                 </span>

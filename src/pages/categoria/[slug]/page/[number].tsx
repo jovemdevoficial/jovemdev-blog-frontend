@@ -14,7 +14,7 @@ import {
   SITE_NAME,
   SITE_AUTHORS,
   SITE_URL,
-} from '../../../../config/api-config';
+} from '../../../../config/site-config';
 
 import { jsonLdPaginationPage } from '../../../../lib/json-ld-pagination-page';
 
@@ -42,8 +42,8 @@ export default function DynamicCategory({
   return (
     <>
       <SEO
-        title={`${category.name} | ${SITE_NAME} Blog`}
-        description="Página para tags"
+        title={`Página ${pagination.page}: Todos os Posts Sobre ${category.name} | ${SITE_NAME}`}
+        description="Aqui você poderá encontrar todos os posts publicados em nosso blog relacionados à categoria frameworks "
         site_name={SITE_NAME}
         authors={SITE_AUTHORS}
         keywords="Tags, Blog"
@@ -81,16 +81,37 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     numberOfPosts: data.length,
   });
 
-  const posts = data.length > 0 ? data : {};
-
   return {
     props: {
       category: {
         slug: categorySlug,
-        name: posts[0].category.name,
+        name: data.length > 0 ? data[0].category.name : '',
       },
       pagination,
-      posts,
+      posts:
+        data.length > 0
+          ? data.map((post) => {
+              return {
+                title: post.title,
+                description: post.description,
+                slug: post.slug,
+                published_at: post.published_at,
+                cover: {
+                  formats: {
+                    small: {
+                      url: post.cover.formats.small.url,
+                    },
+                  },
+                },
+                authors: post.authors.map((author) => {
+                  return {
+                    name: author.name,
+                    slug: author.slug,
+                  };
+                }),
+              };
+            })
+          : [],
     },
   };
 };

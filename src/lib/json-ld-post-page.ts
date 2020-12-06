@@ -1,5 +1,5 @@
 import { PostAuthor, PostTag, PostCategory } from '../domain/posts/post';
-import { SITE_URL } from '../config/api-config';
+import { SITE_URL } from '../config/site-config';
 
 export type JsonLdPostPageProps = {
   title: string;

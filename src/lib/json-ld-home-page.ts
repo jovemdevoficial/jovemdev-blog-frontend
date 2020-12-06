@@ -1,4 +1,4 @@
-import { SITE_NAME, SITE_URL } from '../config/api-config';
+import { SITE_NAME, SITE_URL } from '../config/site-config';
 import { PostData } from '../domain/posts/post';
 
 export type JsonLdHomePageProps = {

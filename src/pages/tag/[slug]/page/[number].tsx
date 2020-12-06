@@ -18,7 +18,7 @@ import {
   SITE_NAME,
   SITE_AUTHORS,
   SITE_URL,
-} from '../../../../config/api-config';
+} from '../../../../config/site-config';
 import { postsPerPage } from '../../../../config/constants';
 
 import FacebookImageDefault from '../../../../assets/images/logo-image-facebook-1200x628.png';
@@ -42,8 +42,8 @@ export default function DynamicTag({
   return (
     <>
       <SEO
-        title={`${tag.name} | ${SITE_NAME} Blog`}
-        description="Página para tags"
+        title={`Página ${pagination.page}: Todos os Posts Sobre ${tag.name} | ${SITE_NAME}`}
+        description="Aqui você poderá encontrar todos os posts publicados em nosso blog relacionados à tag frameworks "
         site_name={SITE_NAME}
         authors={SITE_AUTHORS}
         keywords="Tags, Blog"
@@ -81,16 +81,37 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     numberOfPosts: data.length,
   });
 
-  const posts = data.length > 0 ? data : {};
-
   return {
     props: {
       tag: {
         slug: tagSlug,
-        name: posts[0].tags[0].name,
+        name: data.length > 0 ? data[0].tags[0].name : '',
       },
       pagination,
-      posts,
+      posts:
+        data.length > 0
+          ? data.map((post) => {
+              return {
+                title: post.title,
+                description: post.description,
+                slug: post.slug,
+                published_at: post.published_at,
+                cover: {
+                  formats: {
+                    small: {
+                      url: post.cover.formats.small.url,
+                    },
+                  },
+                },
+                authors: post.authors.map((author) => {
+                  return {
+                    name: author.name,
+                    slug: author.slug,
+                  };
+                }),
+              };
+            })
+          : [],
     },
   };
 };

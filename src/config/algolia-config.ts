@@ -1,3 +1,3 @@
-export const API_KEY = 'd54e7f75aa0efffcd7e85694af81acb1';
-export const APP_ID = 'HJNDCTKLTE';
-export const INDEX_NAME = 'blog_JOVEMDEV';
+export const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+export const APP_ID = process.env.NEXT_PUBLIC_APP_ID;
+export const INDEX_NAME = process.env.NEXT_PUBLIC_INDEX_NAME;

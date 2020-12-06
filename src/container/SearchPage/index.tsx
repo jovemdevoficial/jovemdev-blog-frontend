@@ -25,7 +25,7 @@ import {
   SearchButton,
 } from './styled';
 
-import { SITE_NAME, SITE_AUTHORS, SITE_URL } from '../../config/api-config';
+import { SITE_NAME, SITE_AUTHORS, SITE_URL } from '../../config/site-config';
 import { API_KEY, APP_ID, INDEX_NAME } from '../../config/algolia-config';
 
 import BackgroundImage from '../../assets/svgs/imagem-de-fundo-da-pagina-de-pesquisa-do-blog-jovem-dev.svg';
@@ -45,7 +45,7 @@ export function SearchPage() {
       <SEO
         title={`Pesquisa | ${SITE_NAME} Blog`}
         authors={SITE_AUTHORS}
-        description="Página de pesquisas do Blog jovem dev"
+        description="Não encontrou o que procura? Então faça uma pesquisa avançada em nosso blog utilizando o Algolia"
         site_name={SITE_NAME}
         keywords="Pesquisa, blog"
         type="blog"
