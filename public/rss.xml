@@ -7,177 +7,26 @@
 >
   <channel>
     <title>
-      &lt;![CDATA[ Jovem DEV Blog - RSS Feed ]]&gt;
+      &lt;![CDATA[ Jovem Dev Blog - RSS Feed ]]&gt;
     </title>
     <description
       >&lt;![CDATA[ I'm a software developer &amp; web designer in Colorado Springs, Colorado. I like to explore and write about code, video games, technology, and more. ]]&gt;</description
     >
-    <link>http://localhost:3000</link>
+    <link>https://jovemdev.com</link>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 02 Dec 2020 00:36:50 GMT</lastBuildDate>
-    <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Dec 2020 22:28:57 GMT</lastBuildDate>
+    <atom:link href="https://jovemdev.com/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>
-          &lt;![CDATA[ Teste 3 ]]&gt;
+          &lt;![CDATA[ 3 melhores frameworks frontend para desenvolvimento de SPA ]]&gt;
         </title>
         <description>
-          &lt;![CDATA[ Animus dextera ad femina pontus petitum, *vites ipsa damno* desideret et
-plangens, alumno? **Arge ut** linoque [robora possit
-traxit ]]&gt;
+          &lt;![CDATA[ Você sabe quais são os 3 principais frameworks disponíveis no mercado? Se não, neste post iremos mostrar diversos detalhes sobre essas tecnologias ]]&gt;
         </description>
-        <link>http://localhost:3000/posts/teste-3/</link>
-        <pubDate>Sun, 15 Nov 2020 01:12:36 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/teste-3/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ teste 6 ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ laborum: lente. Natarum manifestabitque priscum. Et ora invenies;
-[coniunx](http://parenti-populare.io/esseiovis.html) in pectus antiqui ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/teste-6/</link>
-        <pubDate>Sun, 15 Nov 2020 01:20:35 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/teste-6/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ teste24 ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ uma nofavafasfas fsafasfsf afadsfasffffffffffffff fsfasfasfas fasfasfasfas fasfas  ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/teste2/</link>
-        <pubDate>Fri, 13 Nov 2020 05:36:53 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/teste2/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ teste 54 ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ Caros a nocte privignae petunt Phoenicas necem terraeque anima. Lenta agri eunti
-datis aequaret dum, coniunx tacitaque egere te carendum, 
- ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/teste-5/</link>
-        <pubDate>Sun, 15 Nov 2020 01:16:34 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/teste-5/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ Entre criar um Blog Pessoal com Gatsby e usar o Medium…  ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ Uma das features mais interessantes do React foi finalmente lançada, o famoso Hooks! Por que é tão legal assim? ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/entre-criar-um-blog-pessoal-com-gatsby-e-usar-o-medium-por-que-nao-ter-os-dois/</link>
-        <pubDate>Mon, 23 Nov 2020 02:48:14 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/entre-criar-um-blog-pessoal-com-gatsby-e-usar-o-medium-por-que-nao-ter-os-dois/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ Um poste teste para texto e saber o maximo de caracteres dss ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ Cara pelo amor de deus, faça essa descrição direito, ja tou com a cabeça doida mermão, mas eu tenho que continuar falando besteira, pois são muitos caract ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss/</link>
-        <pubDate>Fri, 27 Nov 2020 23:38:31 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ Conheça o react-icons. Uma biblioteca de icones famosos. ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ O react-icons é um pacote muito utilizado no desenvolvimento de aplicações React, o mesmo provem a junção de bibliote ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/conheca-o-react-icons-uma-biblioteca-de-icones-famosos/</link>
-        <pubDate>Thu, 26 Nov 2020 22:38:50 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/conheca-o-react-icons-uma-biblioteca-de-icones-famosos/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ teste 7 ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ Satiantur et alios **nutritaque Laurens faveat** quanta Colchis laeva maerenti
-laborum: lente. Natarum manifestabitque priscum. Et ora invenies ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/teste-7/</link>
-        <pubDate>Sun, 15 Nov 2020 01:21:41 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/teste-7/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ Title ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ um dsadas dsadddddddddddddd dsssssssssssss ddddddddddd dsssssssssssss ddddddddddddddd sdddddddddd ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/title/</link>
-        <pubDate>Sat, 14 Nov 2020 01:06:30 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/title/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ teste 4 ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ interea, **ubi limes ora**. Silvaque saepe caespite [dixerat
-anguesque](http://quis.org/inminet) auris cogit sentit finem Baucis vires
-timorem.  ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/teste-4/</link>
-        <pubDate>Sun, 15 Nov 2020 01:13:57 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/teste-4/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ Um poste teste para texto e saber o maximo de caracteres dss ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ Cara pelo amor de deus, faça essa descrição direito, ja tou com a cabeça doida mermão, mas eu tenho que continuar falando besteira, pois são muitos caract ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-2/</link>
-        <pubDate>Sat, 28 Nov 2020 00:02:56 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-2/</guid>
-        <content:encoded />
-      </item>
-    
-      <item>
-        <title>
-          &lt;![CDATA[ Um poste teste para texto e saber o maximo de caracteres dss ]]&gt;
-        </title>
-        <description>
-          &lt;![CDATA[ Cara pelo amor de deus, faça essa descrição direito, ja tou com a cabeça doida mermão, mas eu tenho que continuar falando besteira, pois são muitos caract ]]&gt;
-        </description>
-        <link>http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-1/</link>
-        <pubDate>Fri, 27 Nov 2020 23:41:59 GMT</pubDate>
-        <guid isPermaLink="false">http://localhost:3000/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-1/</guid>
+        <link>https://jovemdev.com/posts/3-melhores-frameworks-frontend-para-desenvolvimento-de-spa/</link>
+        <pubDate>Mon, 07 Dec 2020 21:27:07 GMT</pubDate>
+        <guid isPermaLink="false">https://jovemdev.com/posts/3-melhores-frameworks-frontend-para-desenvolvimento-de-spa/</guid>
         <content:encoded />
       </item>
     
