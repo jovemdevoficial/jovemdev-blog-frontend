@@ -68,14 +68,10 @@ export function SEO({
       <meta property="og:image" content={image_large} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:alt" content={description} />
-      <meta property="og:image:width" content="1000" />
-      <meta property="og:image:height" content="1000" />
 
       <meta property="og:image" content={image_small} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:alt" content={description} />
-      <meta property="og:image:width" content="500" />
-      <meta property="og:image:height" content="500" />
 
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content={site_name} />

@@ -4,7 +4,6 @@ import {
   FaSearch,
   FaTags,
   FaFolderOpen,
-  FaBook,
   FaStickyNote,
   FaRss,
 } from 'react-icons/fa';
@@ -49,12 +48,14 @@ export function SideNav() {
         </a>
       </Link>
 
+      {/*
       <Link href="/sobre">
         <a aria-label="Sobre">
           <FaBook size={34} />
           <span>Sobre</span>
         </a>
       </Link>
+      */}
 
       <Link href="/rss.xml">
         <a aria-label="Feed Rss">

@@ -7,7 +7,7 @@ import Document, {
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-import { SITE_NAME } from '../config/api-config';
+import { SITE_NAME } from '../config/site-config';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {

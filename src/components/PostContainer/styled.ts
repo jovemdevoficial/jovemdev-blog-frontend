@@ -5,6 +5,7 @@ export const Container = styled.article`
 
   img {
     max-width: 100%;
+    margin: ${({ theme }) => theme.spacings.superLarge} 0;
   }
 
   p {
