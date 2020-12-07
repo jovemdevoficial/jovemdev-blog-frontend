@@ -100,7 +100,7 @@ export const jsonLdPostPage = ({
           ['@type']: 'Person',
           name: author.name,
           url: `${SITE_URL}/autor/${author.slug}`,
-          image: author.avatar.formats.small.url,
+          image: author.avatar.url,
           sameAs: [
             author.social_networks.facebook,
             author.social_networks.github,

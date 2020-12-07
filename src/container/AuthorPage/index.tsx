@@ -31,12 +31,7 @@ export function AuthorPage({ author }: AuthorPageProps) {
     name: author.name,
     email: author.email,
     slug: author.slug,
-    image: [
-      author.avatar.formats.thumbnail.url,
-      author.avatar.formats.small.url,
-      author.avatar.formats.medium.url,
-      author.avatar.formats.large.url,
-    ],
+    image: author.avatar.url,
     sameAs: [
       author.social_networks.facebook,
       author.social_networks.github,

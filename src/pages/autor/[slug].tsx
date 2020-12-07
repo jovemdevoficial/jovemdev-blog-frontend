@@ -30,20 +30,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
         email: author.email,
         social_networks: author.social_networks,
         avatar: {
-          formats: {
-            thumbnail: {
-              url: author.avatar.formats.thumbnail.url,
-            },
-            small: {
-              url: author.avatar.formats.small.url,
-            },
-            large: {
-              url: author.avatar.formats.large.url,
-            },
-            medium: {
-              url: author.avatar.formats.medium.url,
-            },
-          },
+          url: author.avatar.url,
         },
         posts: author.posts.map((post) => {
           return {
@@ -58,7 +45,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
             slug: post.slug,
             published_at: post.published_at,
             description: post.description,
-            authors: [{ name: author.name }, { slug: author.slug }],
+            authors: [{ name: author.name, slug: author.slug }],
           };
         }),
       },

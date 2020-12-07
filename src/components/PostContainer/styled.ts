@@ -13,7 +13,6 @@ export const Container = styled.article`
     line-height: 35px;
 
     margin: ${({ theme }) => theme.spacings.medium} 0;
-    text-transform: capitalize;
     text-align: justify;
   }
 

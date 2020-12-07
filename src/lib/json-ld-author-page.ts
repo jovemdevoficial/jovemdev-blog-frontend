@@ -4,7 +4,7 @@ export type JsonLdAuthorPageProps = {
   name: string;
   email: string;
   slug: string;
-  image: string[];
+  image: string;
   sameAs: string[];
 };
 

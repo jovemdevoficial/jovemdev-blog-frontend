@@ -14,7 +14,7 @@ export function AuthorDetails({ author }: AuthorDetailsProps) {
   return (
     <Container>
       <Image
-        src={author.avatar.formats.thumbnail.url}
+        src={author.avatar.url}
         alt={author.name}
         width={150}
         height={150}

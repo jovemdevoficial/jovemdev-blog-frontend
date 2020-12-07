@@ -2,136 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jovemdev.com/404/</loc>
-    <lastmod>2020-12-06T18:37:17.247Z</lastmod>
+    <lastmod>2020-12-07T22:51:52.970Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://jovemdev.com/categorias/</loc>
-    <lastmod>2020-12-06T18:37:17.247Z</lastmod>
+    <lastmod>2020-12-07T22:51:52.970Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://jovemdev.com/</loc>
-    <lastmod>2020-12-06T18:37:17.247Z</lastmod>
+    <lastmod>2020-12-07T22:51:52.970Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://jovemdev.com/pesquisar/</loc>
-    <lastmod>2020-12-06T18:37:17.247Z</lastmod>
+    <lastmod>2020-12-07T22:51:52.970Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://jovemdev.com/sobre/</loc>
-    <lastmod>2020-12-06T18:37:17.247Z</lastmod>
+    <lastmod>2020-12-07T22:51:52.970Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://jovemdev.com/tags/</loc>
-    <lastmod>2020-12-06T18:37:17.247Z</lastmod>
+    <lastmod>2020-12-07T22:51:52.970Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jovemdev.com/posts/teste-3/</loc>
-    <lastmod>2020-11-15T01:12:36.900Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/posts/teste-6/</loc>
-    <lastmod>2020-11-15T01:20:35.202Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/posts/teste2/</loc>
-    <lastmod>2020-11-13T05:36:53.693Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/posts/teste-5/</loc>
-    <lastmod>2020-11-15T01:16:34.977Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc
-      >https://jovemdev.com/posts/entre-criar-um-blog-pessoal-com-gatsby-e-usar-o-medium-por-que-nao-ter-os-dois/</loc
+      >https://jovemdev.com/posts/3-melhores-frameworks-frontend-para-desenvolvimento-de-spa/</loc
     >
-    <lastmod>2020-11-23T02:48:14.039Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://jovemdev.com/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss/</loc
-    >
-    <lastmod>2020-11-27T23:38:31.594Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://jovemdev.com/posts/conheca-o-react-icons-uma-biblioteca-de-icones-famosos/</loc
-    >
-    <lastmod>2020-11-26T22:38:50.095Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/posts/teste-7/</loc>
-    <lastmod>2020-11-15T01:21:41.632Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/posts/title/</loc>
-    <lastmod>2020-11-14T01:06:30.805Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/posts/teste-4/</loc>
-    <lastmod>2020-11-15T01:13:57.448Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://jovemdev.com/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-2/</loc
-    >
-    <lastmod>2020-11-28T00:02:56.716Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://jovemdev.com/posts/um-poste-teste-para-texto-e-saber-o-maximo-de-caracteres-dss-1/</loc
-    >
-    <lastmod>2020-11-27T23:41:59.863Z</lastmod>
+    <lastmod>2020-12-07T21:27:07.035Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -143,77 +58,29 @@
   </url>
 
   <url>
-    <loc>https://jovemdev.com/posts/page/2/</loc>
+    <loc>https://jovemdev.com/categoria/frameworks/page/1/</loc>
+    <lastmod>2020-12-07T20:55:53.610Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jovemdev.com/categoria/javascript/page/1/</loc>
-    <lastmod>2020-11-23T19:22:50.525Z</lastmod>
+    <loc>https://jovemdev.com/tag/angular/page/1/</loc>
+    <lastmod>2020-12-07T20:56:22.939Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jovemdev.com/categoria/python/page/1/</loc>
-    <lastmod>2020-11-23T19:23:20.709Z</lastmod>
+    <loc>https://jovemdev.com/tag/react-js/page/1/</loc>
+    <lastmod>2020-12-07T20:56:33.421Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jovemdev.com/categoria/php/page/1/</loc>
-    <lastmod>2020-11-14T00:50:14.088Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/categoria/golang/page/1/</loc>
-    <lastmod>2020-11-23T19:24:12.433Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/tag/banco-de-dados/page/1/</loc>
-    <lastmod>2020-11-23T19:24:22.448Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/tag/banco-de-dados/page/2/</loc>
-    <lastmod>2020-11-23T19:24:22.448Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/tag/frameworks/page/1/</loc>
-    <lastmod>2020-11-23T19:24:33.299Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/tag/frameworks/page/2/</loc>
-    <lastmod>2020-11-23T19:24:33.299Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/tag/outra-tag/page/1/</loc>
-    <lastmod>2020-11-23T19:24:43.598Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/tag/outra-tag/page/2/</loc>
-    <lastmod>2020-11-23T19:24:43.598Z</lastmod>
+    <loc>https://jovemdev.com/tag/vue-js/page/1/</loc>
+    <lastmod>2020-12-07T20:56:42.922Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -221,14 +88,7 @@
   <url>
     <loc>https://jovemdev.com/autor/almerindo-paixao/</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2020-11-23T20:28:23.330Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jovemdev.com/autor/angelica-pereira/</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2020-11-13T05:20:08.336Z</lastmod>
+    <lastmod>2020-12-07T20:44:04.987Z</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
