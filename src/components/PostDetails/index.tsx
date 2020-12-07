@@ -13,7 +13,7 @@ import { PostData } from '../../domain/posts/post';
 import { Typography } from '../../infra/components/Typography';
 
 import { formateDate } from '../../utils/formate-data';
-import { SITE_URL } from '../../config/api-config';
+import { SITE_URL } from '../../config/site-config';
 
 import { Shields } from '../../components/Shields';
 
